@@ -1,11 +1,15 @@
+import './style.css'
+
 function Header() {
   return (
-    <div>
-      <h1>
-        Bonjour <span>Thomas</span>
+    <header className="header">
+      <h1 className="header__heading">
+        Bonjour <span className="header__heading__highlight">Thomas</span>
       </h1>
-      <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-    </div>
+      <p className="header__subtitle">
+        Félicitation ! Vous avez explosé vos objectifs hier 👏
+      </p>
+    </header>
   )
 }
 

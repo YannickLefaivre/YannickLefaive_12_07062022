@@ -129,8 +129,6 @@ code {
 
 /* Main content */
 
-.main-content-wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 1rem;
+.main-content {
+  margin: 4.25rem 6.6875rem 5.375rem;
 }
