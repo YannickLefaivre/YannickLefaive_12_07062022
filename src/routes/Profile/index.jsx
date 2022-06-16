@@ -1,8 +1,9 @@
 import Dashboard from '../../components/Dashboard'
+import './style.css'
 
 function Profile() {
   return (
-    <main>
+    <main className="main-content-wrapper">
       <Dashboard />
     </main>
   )
