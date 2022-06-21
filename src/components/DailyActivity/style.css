@@ -1,0 +1,36 @@
+.daily-activity-chart {
+  width: 100%;
+  background-color: rgb(var(--chart-background-color));
+  border-radius: 0.325rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.0212);
+  height: 100%;
+  padding-block: 1.46875rem;
+  padding-inline: 1.8125rem 2.6875rem;
+}
+
+.daily-activity-chart__title {
+  fill: rgb(var(--chart-heading-level-1-dark));
+  text-anchor: start;
+}
+
+/* Custom legend */
+
+.custom-legend__item {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.custom-legend__item__icon {
+  color: rgb(var(--secondary-color));
+}
+
+.custom-legend__item__icon--calories {
+  color: rgb(var(--primary-color));
+}
+
+.custom-legend__item__text {
+  color: rgb(var(--tertiary-color));
+  font-size: var(--desktop-font-size-14px-in-rem);
+  margin-left: 0.75rem;
+}

@@ -9,17 +9,17 @@
 
   --primary-color-alternate: 230, 0, 0;
 
-  --secondary-color: 40, 45, 48, 1;
+  --secondary-color: 40, 45, 48;
+
+  --tertiary-color: 116, 121, 140;
 
   --chart-heading-level-1-dark: 32, 37, 58;
 
-  --chart-heading-level-2-text-light: 116, 121, 140;
+  --daily-activity-line-color: 222, 222, 222;
 
-  --dotted-line-color: 222, 222, 222;
+  --daily-activity-chart-tick-color: 155, 158, 172;
 
-  --daily-activity-chart-label-color: 155, 158, 172, 1;
-
-  --daily-activity-chart-cell-background-color: 196, 196, 196, 0.5;
+  --daily-activity-chart-cursor-background-color: 196, 196, 196, 0.5;
 
   --text-light: 255, 255, 255;
   --text-dark: 0, 0, 0;
@@ -30,16 +30,16 @@
 
   /* Font sizes */
 
-  --desktop-font-size-extra-large: 1.25rem;
-  --desktop-font-size-large: 0.9375rem;
-  --desktop-font-size-medium: 0.875rem;
-  --desktop-font-size-small: 0.75rem;
-  --desktop-font-size-extra-small: 0.4375rem;
+  --desktop-font-size-20px-in-rem: 1.25rem;
+  --desktop-font-size-15px-in-rem: 0.9375rem;
+  --desktop-font-size-14px-in-rem: 0.875rem;
+  --desktop-font-size-12px-in-rem: 0.75rem;
+  --desktop-font-size-7px-in-rem: 0.4375rem;
 
-  --desktop-font-size-header-heading: 3rem;
-  --desktop-font-size-average-score-chart-pourcentage-number: 1.625rem;
-  --desktop-font-size-header-subtitle: 1.125rem;
-  --desktop-font-size-duration-sessions: 0.5rem;
+  --desktop-font-size-48px-in-rem: 3rem;
+  --desktop-font-size-26px-in-rem: 1.625rem;
+  --desktop-font-size-18px-in-rem: 1.125rem;
+  --desktop-font-size-8px-in-rem: 0.5rem;
 
   /* Font weights */
 
@@ -125,6 +125,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+li {
+  list-style-type: none;
 }
 
 /* Main content */

@@ -7,7 +7,7 @@
 .header__heading {
   margin-top: 0;
   margin-bottom: 2.25625rem;
-  font-size: var(--desktop-font-size-header-heading);
+  font-size: var(--desktop-font-size-48px-in-rem);
   font-weight: var(--font-weight-medium);
 }
 
@@ -17,6 +17,6 @@
 
 .header__subtitle {
   margin: 0;
-  font-size: var(--desktop-font-size-header-subtitle);
+  font-size: var(--desktop-font-size-18px-in-rem);
   font-weight: normal;
 }
