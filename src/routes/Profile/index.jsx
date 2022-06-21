@@ -6,6 +6,9 @@ function Profile() {
   return (
     <main className="main-content dashboard">
       <Header />
+      <div className="dashboard-user-statistics">
+        <DailyActivity />
+      </div>
     </main>
   )
 }

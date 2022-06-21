@@ -127,6 +127,10 @@ code {
     monospace;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* Main content */
 
 .main-content {

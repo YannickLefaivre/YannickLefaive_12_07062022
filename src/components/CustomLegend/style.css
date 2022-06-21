@@ -1,0 +1,8 @@
+.custom-legend {
+  display: flex;
+  justify-content: space-between;
+  height: 1.5625rem;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+}
