@@ -30,20 +30,33 @@
 
   /* Font sizes */
 
+  --desktop-font-size-48px-in-rem: 3rem;
+  --desktop-font-size-26px-in-rem: 1.625rem;
   --desktop-font-size-20px-in-rem: 1.25rem;
+  --desktop-font-size-18px-in-rem: 1.125rem;
   --desktop-font-size-15px-in-rem: 0.9375rem;
   --desktop-font-size-14px-in-rem: 0.875rem;
   --desktop-font-size-12px-in-rem: 0.75rem;
-  --desktop-font-size-7px-in-rem: 0.4375rem;
-
-  --desktop-font-size-48px-in-rem: 3rem;
-  --desktop-font-size-26px-in-rem: 1.625rem;
-  --desktop-font-size-18px-in-rem: 1.125rem;
   --desktop-font-size-8px-in-rem: 0.5rem;
+  --desktop-font-size-7px-in-rem: 0.4375rem;
 
   /* Font weights */
 
   --font-weight-medium: 500;
+
+  /* Border radius */
+
+  --small-rounded-corner: 0.3125rem;
+
+  /* Box shadow */
+
+  --chart-box-shadow-color: rgba(var(--text-dark), 0.0212);
+  --chart-box-shadow-offset: 0 0.125rem;
+  --chart-box-shadow-blur: 0.25rem;
+  --chart-box-shadow-spread-radius: 0;
+  --chart-box-shadow: var(--chart-box-shadow-offset)
+    var(--chart-box-shadow-blur) var(--chart-box-shadow-spread-radius)
+    var(--chart-box-shadow-color);
 }
 
 @font-face {
