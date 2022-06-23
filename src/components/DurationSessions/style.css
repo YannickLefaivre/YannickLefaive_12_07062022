@@ -1,4 +1,4 @@
-.duration-sessions {
+.duration-sessions-chart {
   background-color: rgb(var(--primary-color-alternate));
   background-image: linear-gradient(
     270deg,
@@ -13,7 +13,7 @@
   width: 16.125rem;
 }
 
-.duration-sessions__title {
+.duration-sessions-chart__title {
   fill: rgba(var(--text-light), 0.5);
   font-size: var(--desktop-font-size-15px-in-rem);
 }

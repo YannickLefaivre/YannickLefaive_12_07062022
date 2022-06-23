@@ -8,7 +8,7 @@ function DurationSessions() {
   const customXAxisMargin = 19.52
 
   return (
-    <div className="duration-sessions">
+    <div className="duration-sessions-chart">
       <ResponsiveContainer>
         <AreaChart
           data={userMock.averageSession.sessions}
@@ -28,7 +28,7 @@ function DurationSessions() {
             x={0}
             y={0}
             dominantBaseline="hanging"
-            className="duration-sessions__title"
+            className="duration-sessions-chart__title"
           >
             Durée moyenne des
             <tspan x={0} y={20}>
