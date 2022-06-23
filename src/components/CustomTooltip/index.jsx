@@ -1,6 +1,27 @@
 import PropTypes from 'prop-types'
 import './style.css'
 
+/**
+ *
+ * @callback ValueUnit
+ * @param {String} payloadName
+ *
+ * @return {String} the unit of the payload value
+ *
+ */
+
+/**
+ *
+ * @param {Object} props
+ * @param {Array} props.payload
+ * @param {Boolean} props.active
+ * @param {Object} props.styleModifier
+ * @param {String} props.styleModifier.customTooltipContainer
+ * @param {String} props.styleModifier.customTooltipLabel
+ * @param {ValueUnit} valueUnitCallback
+ *
+ * @returns {JSX.Element | null}
+ */
 function CustomTooltip({ payload, active, styleModifier, valueUnitCallback }) {
   const whiteSpace = ' '
 

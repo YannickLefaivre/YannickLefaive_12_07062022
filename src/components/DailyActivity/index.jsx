@@ -15,6 +15,15 @@ import CustomTooltip from '../CustomTooltip'
 import RectangleWithRoundedTopCorner from '../RectangleWithRoundedTopCorner'
 import './style.css'
 
+/**
+ *
+ * Attribution:
+ *  I learned how to integrate the chart title by follow
+ *  the last solution given on the following
+ *  [GitHub issue](https://github.com/recharts/recharts/issues/478)
+ *
+ * @returns
+ */
 function DailyActivity() {
   const sessionsWithoutYearAndMonthNumberInDayProp =
     userMock.activity.sessions.map((session) => {
