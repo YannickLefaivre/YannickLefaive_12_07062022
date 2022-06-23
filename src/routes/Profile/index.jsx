@@ -1,5 +1,6 @@
 import Header from '../../components/Header'
 import DailyActivity from '../../components/DailyActivity'
+import DurationSessions from '../../components/DurationSessions'
 import './style.css'
 
 function Profile() {
@@ -8,6 +9,7 @@ function Profile() {
       <Header />
       <div className="dashboard-user-statistics">
         <DailyActivity />
+        <DurationSessions />
       </div>
     </main>
   )
