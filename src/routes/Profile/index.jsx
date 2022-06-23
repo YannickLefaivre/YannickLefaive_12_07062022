@@ -1,6 +1,6 @@
-import './style.css'
 import Header from '../../components/Header'
 import DailyActivity from '../../components/DailyActivity'
+import './style.css'
 
 function Profile() {
   return (
