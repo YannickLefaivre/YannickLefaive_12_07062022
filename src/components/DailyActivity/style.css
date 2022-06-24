@@ -1,11 +1,14 @@
 .daily-activity-chart {
-  width: 100%;
   background-color: rgb(var(--chart-background-color));
-  border-radius: 0.325rem;
+  border-radius: var(--small-rounded-corner);
+  box-sizing: border-box;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.0212);
+  grid-column: 1 / -1;
+  grid-row: 1;
   height: 100%;
   padding-block: 1.46875rem;
   padding-inline: 1.8125rem 2.6875rem;
+  width: 100%;
 }
 
 .daily-activity-chart__title {

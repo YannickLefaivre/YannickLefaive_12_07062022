@@ -9,14 +9,23 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import * as userMock from '../../__mocks__/userMock'
-import FormatDate from '../../utils/data-formatters/formatDate.js'
+import FormatDate from '../../utils/data-formatters/FormatDate.js'
 import CustomLegend from '../CustomLegend'
 import CustomTooltip from '../CustomTooltip'
 import RectangleWithRoundedTopCorner from '../RectangleWithRoundedTopCorner'
 import './style.css'
 
+/**
+ *
+ * Attribution:
+ *  I learned how to integrate the chart title by follow
+ *  the last solution given on the following
+ *  [GitHub issue](https://github.com/recharts/recharts/issues/478)
+ *
+ * @returns
+ */
 function DailyActivity() {
-  const SESSIONS_WITHOUT_YEAR_AND_MONTH_NUMBER_IN_DAY_PROP =
+  const sessionsWithoutYearAndMonthNumberInDayProp =
     userMock.activity.sessions.map((session) => {
       session.day = FormatDate.retrieveDayNumber(session.day)
 
@@ -32,7 +41,7 @@ function DailyActivity() {
     <div className="daily-activity-chart">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
-          data={SESSIONS_WITHOUT_YEAR_AND_MONTH_NUMBER_IN_DAY_PROP}
+          data={sessionsWithoutYearAndMonthNumberInDayProp}
           margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
           barCategoryGap={7}
           barGap={8}
@@ -107,7 +116,13 @@ function DailyActivity() {
             cursor={{
               fill: 'rgba(var(--daily-activity-chart-cursor-background-color)',
             }}
-            content={<CustomTooltip />}
+            content={
+              <CustomTooltip
+                valueUnitCallback={(payloadName) =>
+                  payloadName === 'kilogram' ? 'kg' : 'kCal'
+                }
+              />
+            }
           />
           <Bar dataKey="kilogram" shape={<RectangleWithRoundedTopCorner />} />
           <Bar dataKey="calories" shape={<RectangleWithRoundedTopCorner />} />
