@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import * as userMock from '../../__mocks__/userMock'
-import FormatDate from '../../utils/data-formatters/formatDate.js'
+import FormatDate from '../../utils/data-formatters/FormatDate.js'
 import CustomLegend from '../CustomLegend'
 import CustomTooltip from '../CustomTooltip'
 import RectangleWithRoundedTopCorner from '../RectangleWithRoundedTopCorner'

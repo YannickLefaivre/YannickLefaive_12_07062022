@@ -31,7 +31,7 @@ function DurationSessions() {
             className="duration-sessions-chart__title"
           >
             Durée moyenne des
-            <tspan x={0} y={20}>
+            <tspan x={0} y={24}>
               sessions
             </tspan>
           </text>
@@ -64,10 +64,11 @@ function DurationSessions() {
             }}
             dot={false}
             dataKey="sessionLength"
-            legendType="none"
-            type="monotone"
-            stroke="url(#sessionLengthColor)"
             fill="url(#sessionLengthColor)"
+            legendType="none"
+            stroke="url(#sessionLengthColor)"
+            strokeWidth={1.8}
+            type="monotone"
           />
         </AreaChart>
       </ResponsiveContainer>
