@@ -5,12 +5,14 @@
     rgb(var(--text)) 1.19%,
     rgba(var(--text-light), 0.403191) 81.27%
   );
-
+  box-sizing: border-box;
   border-radius: var(--small-rounded-corner);
   box-shadow: var(--chart-box-shadow);
-  height: 16.4375rem;
+  grid-column: 1;
+  grid-row: 2;
+  height: 100%;
   padding: 1.8125rem 0.9375rem 1rem;
-  width: 16.125rem;
+  width: 100%;
 }
 
 .duration-sessions-chart__title {
