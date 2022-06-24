@@ -3,6 +3,20 @@
 /* CSS custom properties */
 
 :root {
+  /* Border radius */
+
+  --small-rounded-corner: 0.3125rem;
+
+  /* Box shadow */
+
+  --chart-box-shadow-color: rgba(var(--text-dark), 0.0212);
+  --chart-box-shadow-offset: 0 0.125rem;
+  --chart-box-shadow-blur: 0.25rem;
+  --chart-box-shadow-spread-radius: 0;
+  --chart-box-shadow: var(--chart-box-shadow-offset)
+    var(--chart-box-shadow-blur) var(--chart-box-shadow-spread-radius)
+    var(--chart-box-shadow-color);
+
   /* Colors */
 
   --primary-color: 255, 0, 0;
@@ -43,20 +57,6 @@
   /* Font weights */
 
   --font-weight-medium: 500;
-
-  /* Border radius */
-
-  --small-rounded-corner: 0.3125rem;
-
-  /* Box shadow */
-
-  --chart-box-shadow-color: rgba(var(--text-dark), 0.0212);
-  --chart-box-shadow-offset: 0 0.125rem;
-  --chart-box-shadow-blur: 0.25rem;
-  --chart-box-shadow-spread-radius: 0;
-  --chart-box-shadow: var(--chart-box-shadow-offset)
-    var(--chart-box-shadow-blur) var(--chart-box-shadow-spread-radius)
-    var(--chart-box-shadow-color);
 }
 
 @font-face {
