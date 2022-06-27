@@ -25,33 +25,33 @@ import './style.css'
  * @param {String} props.measuringUnit - The unit
  * of measure of the macronutriment.
  *
- * @param {Object} [props.styleModifier] - Allows
+ * @param {Object} [props.styleModifier=null] - Allows
  * you to change the style of the elements of the
  * information card.
  *
- * @param {String} [props.styleModifier.infoCardContainer = ''] -
+ * @param {String} [props.styleModifier.infoCardContainer=undefined] -
  * Allows you to change the style of the
  * information card container.
  *
- * @param {String} [props.styleModifier.infoCardIconContainer = ''] -
+ * @param {String} [props.styleModifier.infoCardIconContainer=undefined] -
  * Allows you to change the style of the
  * macronutrient icon container.
  *
- * @param {String} [props.styleModifier.infoCardIcon = ''] -
+ * @param {String} [props.styleModifier.infoCardIcon=undefined] -
  * Allows you to change the style of the
  * macronutrient icon.
  *
- * @param {String} [props.styleModifier.macronutrientDataContainer = ''] -
+ * @param {String} [props.styleModifier.macronutrientDataContainer=undefined] -
  * Allows you to change the style of the container
  * of data regarding the number and type of
  * macronutrient spend.
  *
- * @param {String} [props.styleModifier.macronutrientCount = ''] -
+ * @param {String} [props.styleModifier.macronutrientCount=undefined] -
  * Allows you to change the style of the text
  * indicating the number of macronutrients the user
  * spends.
  *
- * @param {String} [props.styleModifier.macronutrientType = ''] -
+ * @param {String} [props.styleModifier.macronutrientType=undefined] -
  * Allows you to change the style of the text
  * indicating the type of macronutrient to which
  * the information card corresponds.
