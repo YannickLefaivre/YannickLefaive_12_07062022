@@ -42,6 +42,9 @@
 
   --chart-background-color: 251, 251, 251;
 
+  --info-card-protein-icon-container-background-color: 74, 184, 255, 0.1;
+  --info-card-carbohydrate-icon-container-background-color: 249, 206, 35, 0.1;
+  --info-card-lipid-icon-container-background-color: 253, 81, 129, 0.1;
 
   /* Column */
 
@@ -62,6 +65,10 @@
   /* Font weights */
 
   --font-weight-medium: 500;
+
+  /* Sizes */
+
+  --info-card-icon-container-size: 3.75rem;
 }
 
 @font-face {
