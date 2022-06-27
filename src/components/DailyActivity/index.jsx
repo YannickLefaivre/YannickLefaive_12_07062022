@@ -12,7 +12,6 @@ import * as userMock from '../../__mocks__/userMock'
 import FormatDate from '../../utils/data-formatters/FormatDate.js'
 import CustomLegend from '../CustomLegend'
 import CustomTooltip from '../CustomTooltip'
-import RectangleWithRoundedTopCorner from '../RectangleWithRoundedTopCorner'
 import './style.css'
 
 /**
@@ -123,9 +122,18 @@ function DailyActivity() {
                 }
               />
             }
+            filterNull
           />
-          <Bar dataKey="kilogram" shape={<RectangleWithRoundedTopCorner />} />
-          <Bar dataKey="calories" shape={<RectangleWithRoundedTopCorner />} />
+          <Bar
+            dataKey="kilogram"
+            fill="rgb(var(--secondary-color))"
+            radius={[3, 3, 0, 0]}
+          />
+          <Bar
+            dataKey="calories"
+            fill="rgb(var(--primary-color-alternate))"
+            radius={[3, 3, 0, 0]}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>
