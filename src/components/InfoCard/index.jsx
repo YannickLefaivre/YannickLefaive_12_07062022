@@ -132,13 +132,7 @@ InfoCard.propTypes = {
 }
 
 InfoCard.defaultProps = {
-  styleModifier: {
-    infoCardContainer: '',
-    infoCardIconContainer: '',
-    macronutrientDataContainer: '',
-    macronutrientCount: '',
-    macronutrientType: '',
-  },
+  styleModifier: null,
 }
 
 export default InfoCard
