@@ -130,6 +130,12 @@
   font-style: italic;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -147,6 +153,11 @@ code {
 
 li {
   list-style-type: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /* Main content */
