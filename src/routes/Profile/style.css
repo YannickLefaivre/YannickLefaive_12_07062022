@@ -5,10 +5,10 @@
 
 .dashboard-user-statistics {
   flex: 1;
-  height: auto;
-  width: 52.1875rem;
   display: grid;
-  grid-template-columns: repeat(3, 16.125rem);
+  height: auto;
+  grid-template-columns: repeat(3, var(--column-size));
   grid-template-rows: 20rem 16.4375rem;
   gap: 1.875rem;
+  width: 52.1875rem;
 }

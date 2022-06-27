@@ -9,13 +9,13 @@
 
   /* Box shadow */
 
-  --chart-box-shadow-color: rgba(var(--text-dark), 0.0212);
-  --chart-box-shadow-offset: 0 0.125rem;
-  --chart-box-shadow-blur: 0.25rem;
-  --chart-box-shadow-spread-radius: 0;
-  --chart-box-shadow: var(--chart-box-shadow-offset)
-    var(--chart-box-shadow-blur) var(--chart-box-shadow-spread-radius)
-    var(--chart-box-shadow-color);
+  --sportsee-box-shadow-color: rgba(var(--text-dark), 0.0212);
+  --sportsee-box-shadow-offset: 0 0.125rem;
+  --sportsee-box-shadow-blur: 0.25rem;
+  --sportsee-box-shadow-spread-radius: 0;
+  --sportsee-box-shadow: var(--sportsee-box-shadow-offset)
+    var(--sportsee-box-shadow-blur) var(--sportsee-box-shadow-spread-radius)
+    var(--sportsee-box-shadow-color);
 
   /* Colors */
 
@@ -41,6 +41,11 @@
   --dashboard-background-color: 229, 229, 229;
 
   --chart-background-color: 251, 251, 251;
+
+
+  /* Column */
+
+  --column-size: 16.125rem;
 
   /* Font sizes */
 
