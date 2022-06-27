@@ -2,7 +2,7 @@
   background-color: rgb(var(--text-light));
   border-radius: var(--small-rounded-corner);
   box-sizing: border-box;
-  box-shadow: var(--chart-box-shadow);
+  box-shadow: var(--sportsee-box-shadow);
   grid-column: 3;
   grid-row: 2;
   height: 100%;

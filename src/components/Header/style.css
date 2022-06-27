@@ -15,7 +15,6 @@
 }
 
 .header__subtitle {
-  margin: 0;
   font-size: var(--desktop-font-size-18px-in-rem);
   font-weight: normal;
 }

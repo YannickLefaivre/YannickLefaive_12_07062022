@@ -7,7 +7,7 @@
   );
   box-sizing: border-box;
   border-radius: var(--small-rounded-corner);
-  box-shadow: var(--chart-box-shadow);
+  box-shadow: var(--sportsee-box-shadow);
   grid-column: 1;
   grid-row: 2;
   height: 100%;

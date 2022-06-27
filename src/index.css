@@ -9,13 +9,13 @@
 
   /* Box shadow */
 
-  --chart-box-shadow-color: rgba(var(--text-dark), 0.0212);
-  --chart-box-shadow-offset: 0 0.125rem;
-  --chart-box-shadow-blur: 0.25rem;
-  --chart-box-shadow-spread-radius: 0;
-  --chart-box-shadow: var(--chart-box-shadow-offset)
-    var(--chart-box-shadow-blur) var(--chart-box-shadow-spread-radius)
-    var(--chart-box-shadow-color);
+  --sportsee-box-shadow-color: rgba(var(--text-dark), 0.0212);
+  --sportsee-box-shadow-offset: 0 0.125rem;
+  --sportsee-box-shadow-blur: 0.25rem;
+  --sportsee-box-shadow-spread-radius: 0;
+  --sportsee-box-shadow: var(--sportsee-box-shadow-offset)
+    var(--sportsee-box-shadow-blur) var(--sportsee-box-shadow-spread-radius)
+    var(--sportsee-box-shadow-color);
 
   /* Colors */
 
@@ -42,6 +42,14 @@
 
   --chart-background-color: 251, 251, 251;
 
+  --info-card-protein-icon-container-background-color: 74, 184, 255, 0.1;
+  --info-card-carbohydrate-icon-container-background-color: 249, 206, 35, 0.1;
+  --info-card-lipid-icon-container-background-color: 253, 81, 129, 0.1;
+
+  /* Column */
+
+  --column-size: 16.125rem;
+
   /* Font sizes */
 
   --desktop-font-size-48px-in-rem: 3rem;
@@ -57,6 +65,10 @@
   /* Font weights */
 
   --font-weight-medium: 500;
+
+  /* Sizes */
+
+  --info-card-icon-container-size: 3.75rem;
 }
 
 @font-face {
@@ -125,6 +137,12 @@
   font-style: italic;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -142,6 +160,11 @@ code {
 
 li {
   list-style-type: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /* Main content */

@@ -1,14 +1,45 @@
 .dashboard {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .dashboard-user-statistics {
-  flex: 1;
-  height: auto;
-  width: 52.1875rem;
   display: grid;
-  grid-template-columns: repeat(3, 16.125rem);
+  height: auto;
+  grid-template-columns: repeat(3, var(--column-size));
   grid-template-rows: 20rem 16.4375rem;
   gap: 1.875rem;
+  width: 52.1875rem;
+}
+
+.dashboard__key-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4375rem;
+  width: 16.125rem;
+}
+
+/* Infos card style modifier */
+
+.info-card__icon-container--calorie {
+  background-color: rgba(var(--primary-color), 0.1);
+}
+
+.info-card__icon-container--protein {
+  background-color: rgba(
+    var(--info-card-protein-icon-container-background-color)
+  );
+}
+
+.info-card__icon-container--carbohydrate {
+  background-color: rgba(
+    var(--info-card-carbohydrate-icon-container-background-color)
+  );
+}
+
+.info-card__icon-container--lipid {
+  background-color: rgba(
+    var(--info-card-lipid-icon-container-background-color)
+  );
 }

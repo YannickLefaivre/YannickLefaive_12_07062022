@@ -1,0 +1,42 @@
+.info-card {
+  align-items: center;
+  background-color: white;
+  border-radius: var(--small-rounded-corner);
+  box-shadow: var(--sportsee-box-shadow);
+  column-gap: 1.5rem;
+  display: flex;
+  height: 7.75rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.info-card__icon-container {
+  align-items: center;
+  background-color: rgb(204, 204, 204);
+  border-radius: 0.375rem;
+  display: flex;
+  justify-content: center;
+  width: var(--info-card-icon-container-size);
+  height: var(--info-card-icon-container-size);
+}
+
+.info-card__icon-container__shape {
+  font-size: var(--desktop-font-size-14px-in-rem);
+}
+
+.info-card__macronutrient-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.125rem;
+}
+
+.info-card__macronutrient-data__count {
+  color: rgb(var(--secondary-color));
+  font-size: var(--desktop-font-size-20px-in-rem);
+  font-weight: bold;
+}
+
+.info-card__macronutrient-data__type {
+  color: var(--tertiary-color);
+  font-size: var(--desktop-font-size-14px-in-rem);
+}
