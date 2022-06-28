@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import {
   Radar,
   RadarChart,
@@ -5,8 +7,9 @@ import {
   PolarGrid,
   PolarAngleAxis,
 } from 'recharts'
-import * as userMock from '../../__mocks__/userMock.js'
-import TypeOfActivityData from '../../utils/data-formatters/TypeOfActivityData.js'
+import { typeOfActivityDataProvider } from '../../utils/providers.js'
+import Loader from '../Loader'
+import Error from '../Error'
 import './style.css'
 
 /**
@@ -21,42 +24,62 @@ import './style.css'
  * @returns {JSX.Element} A TypeOfActivity component.
  */
 function TypeOfActivity() {
-  const kindOfActivity = userMock.performance.kind
-  let typeOfActivityData = []
+  const [isLoading, setLoading] = useState(true)
+  const [typeOfActivityData, setTypeOfActivityData] = useState([])
+  const [error, setError] = useState(false)
 
-  typeOfActivityData = TypeOfActivityData.formatKindPropOfAllActivityObject(
-    userMock.performance.data,
-    kindOfActivity
-  )
+  const { userId } = useParams()
+
+  useEffect(() => {
+    const getTypeOfActivityData = async () => {
+      try {
+        const data = await typeOfActivityDataProvider(userId)
+
+        setTypeOfActivityData(data)
+      } catch (err) {
+        setError(true)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    getTypeOfActivityData()
+  }, [])
 
   return (
     <div className="type-of-activity-chart">
-      <ResponsiveContainer>
-        <RadarChart
-          width={180}
-          height={180}
-          outerRadius={70}
-          data={typeOfActivityData}
-          margin={{ top: 0, left: 0, bottom: 0, right: 0 }}
-        >
-          <PolarGrid stroke="rgb(var(--text-light))" radialLines={false} />
-          <PolarAngleAxis
-            dataKey="kind"
-            tickLine={false}
-            tick={{
-              dy: 4,
-              fill: 'rgb(var(--text-light))',
-              fontSize: 12,
-            }}
-          />
-          <Radar
-            name="performance"
-            dataKey="value"
-            fill="#FF0101"
-            fillOpacity="0.7"
-          />
-        </RadarChart>
-      </ResponsiveContainer>
+      {isLoading ? (
+        <Loader />
+      ) : error ? (
+        <Error />
+      ) : (
+        <ResponsiveContainer>
+          <RadarChart
+            width={180}
+            height={180}
+            outerRadius={70}
+            data={typeOfActivityData.userPerformance}
+            margin={{ top: 0, left: 0, bottom: 0, right: 0 }}
+          >
+            <PolarGrid stroke="rgb(var(--text-light))" radialLines={false} />
+            <PolarAngleAxis
+              dataKey="kind"
+              tickLine={false}
+              tick={{
+                dy: 4,
+                fill: 'rgb(var(--text-light))',
+                fontSize: 12,
+              }}
+            />
+            <Radar
+              name="performance"
+              dataKey="value"
+              fill="#FF0101"
+              fillOpacity="0.7"
+            />
+          </RadarChart>
+        </ResponsiveContainer>
+      )}
     </div>
   )
 }

@@ -2,6 +2,7 @@ import axios from 'axios'
 import HeaderData from './data-formatters/HeaderData.js'
 import DailyActivityData from './data-formatters/DailyActivityData.js'
 import DurationSessionsData from './data-formatters/DurationSessionsData.js'
+import TypeOfActivityData from './data-formatters/TypeOfActivityData.js'
 
 /**
  * Display a message in the console to warn that the HTTP call ended with an error.
@@ -66,6 +67,31 @@ export async function durationSessionsDataProvider(userId) {
     const userAverageSessions = response.data.data.sessions
 
     const durationSessionsData = new DurationSessionsData(userAverageSessions)
+
+    return durationSessionsData
+  } catch (error) {
+    warnThatHTTPCallFailed(error)
+  }
+}
+
+/**
+ *
+ * @param {Number} userId
+ *
+ * @return {Promise<TypeOfActivityData | undefined>}
+ */
+export async function typeOfActivityDataProvider(userId) {
+  try {
+    const response = await axios.get(
+      `http://localhost:3000/user/${userId}/performance`
+    )
+    const userActivities = response.data.data.data
+    const kindOfActivity = response.data.data.kind
+
+    const durationSessionsData = new TypeOfActivityData(
+      userActivities,
+      kindOfActivity
+    )
 
     return durationSessionsData
   } catch (error) {
