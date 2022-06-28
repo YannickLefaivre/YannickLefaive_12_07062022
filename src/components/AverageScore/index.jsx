@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { ResponsiveContainer, RadialBarChart, RadialBar } from 'recharts'
-import { averageScoreDataProvider } from '../../utils/providers'
+import { averageScoreDataProvider } from '../../utils/providers.js'
 import Error from '../Error'
 import Loader from '../Loader'
 import './style.css'
