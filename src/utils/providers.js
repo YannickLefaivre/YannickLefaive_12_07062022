@@ -4,6 +4,7 @@ import DailyActivityData from './data-formatters/DailyActivityData.js'
 import DurationSessionsData from './data-formatters/DurationSessionsData.js'
 import TypeOfActivityData from './data-formatters/TypeOfActivityData.js'
 import AverageScoreData from './data-formatters/AverageScoreData.js'
+import ProfileData from './data-formatters/ProfileData.js'
 
 /**
  * Display a message in the console to warn that the HTTP call ended with an error.
@@ -121,6 +122,25 @@ export async function averageScoreDataProvider(userId) {
     ]
 
     return durationSessionsData
+  } catch (error) {
+    warnThatHTTPCallFailed(error)
+  }
+}
+
+/**
+ *
+ * @param {Number} userId
+ *
+ * @returns {Promise<ProfileData | undefined>}
+ */
+export async function profileDataProvider(userId) {
+  try {
+    const response = await axios.get(`http://localhost:3000/user/${userId}`)
+    const userKeyData = response.data.data.keyData
+
+    const profileData = new ProfileData(userKeyData)
+
+    return profileData
   } catch (error) {
     warnThatHTTPCallFailed(error)
   }
