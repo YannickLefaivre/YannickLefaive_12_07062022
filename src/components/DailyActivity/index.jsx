@@ -57,7 +57,9 @@ function DailyActivity() {
   return (
     <div className="daily-activity-chart">
       {isLoading ? (
-        <Loader />
+        <Loader>
+          <p>Chargement des données de la page...</p>
+        </Loader>
       ) : error ? (
         <Error />
       ) : (

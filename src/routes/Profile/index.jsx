@@ -45,7 +45,9 @@ function Profile() {
       </div>
       <div className="dashboard__key-infos">
         {isLoading ? (
-          <Loader />
+          <Loader>
+            <p>Chargement des données de la page...</p>
+          </Loader>
         ) : error ? (
           <Error />
         ) : (

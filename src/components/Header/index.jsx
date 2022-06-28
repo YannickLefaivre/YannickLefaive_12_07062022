@@ -31,7 +31,9 @@ function Header() {
   return (
     <header className="header">
       {isLoading ? (
-        <Loader />
+        <Loader>
+          <p>Chargement des données de la page...</p>
+        </Loader>
       ) : error ? (
         <Error />
       ) : (
