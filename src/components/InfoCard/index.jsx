@@ -2,12 +2,8 @@ import PropTypes from 'prop-types'
 import './style.css'
 
 /**
- * Displays the key information of the user in the
- * form of a card, the data of which depends on the
- * props passed as parameter by the user of the
- * component: type of macronutrient, number of
- * macronutrient, icon of the macronutrient
- * represented by the card.
+ * Displays information about calories, proteins,
+ * carbohydrates and fats of the day.
  *
  * @param {Object} props - The function component props.
  * @param {String} props.macronutrientIconURL - The
@@ -44,17 +40,16 @@ import './style.css'
  * @param {String} [props.styleModifier.macronutrientDataContainer=undefined] -
  * Allows you to change the style of the container
  * of data regarding the number and type of
- * macronutrient spend.
+ * macronutrient of the information card.
  *
  * @param {String} [props.styleModifier.macronutrientCount=undefined] -
- * Allows you to change the style of the text
- * indicating the number of macronutrients the user
- * spends.
+ * Alows you to change the style of the text
+ * indicating the number of daily macronutrients.
  *
  * @param {String} [props.styleModifier.macronutrientType=undefined] -
  * Allows you to change the style of the text
- * indicating the type of macronutrient to which
- * the information card corresponds.
+ * indicating the type of macronutrient the
+ * information card corresponds to.
  *
  * @return {JSX.Element} A InfoCard component.
  */
