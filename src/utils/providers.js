@@ -3,6 +3,7 @@ import HeaderData from './data-formatters/HeaderData.js'
 import DailyActivityData from './data-formatters/DailyActivityData.js'
 import DurationSessionsData from './data-formatters/DurationSessionsData.js'
 import TypeOfActivityData from './data-formatters/TypeOfActivityData.js'
+import AverageScoreData from './data-formatters/AverageScoreData.js'
 
 /**
  * Display a message in the console to warn that the HTTP call ended with an error.
@@ -92,6 +93,32 @@ export async function typeOfActivityDataProvider(userId) {
       userActivities,
       kindOfActivity
     )
+
+    return durationSessionsData
+  } catch (error) {
+    warnThatHTTPCallFailed(error)
+  }
+}
+
+/**
+ *
+ * @param {Number} userId
+ *
+ * @return {Promise<AverageScoreData | undefined>}
+ */
+export async function averageScoreDataProvider(userId) {
+  try {
+    const response = await axios.get(`http://localhost:3000/user/${userId}`)
+
+    const scorePropExist = response.data.data.score !== undefined
+
+    const completionOfTheUsersDailyObjective = scorePropExist
+      ? response.data.data.score
+      : response.data.data.todayScore
+
+    const durationSessionsData = [
+      new AverageScoreData(completionOfTheUsersDailyObjective),
+    ]
 
     return durationSessionsData
   } catch (error) {
