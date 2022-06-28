@@ -1,0 +1,11 @@
+.average-score-chart {
+  background-color: rgb(var(--text-light));
+  border-radius: var(--small-rounded-corner);
+  box-sizing: border-box;
+  box-shadow: var(--sportsee-box-shadow);
+  grid-column: 3;
+  grid-row: 2;
+  height: 100%;
+  padding: 1.141875rem 1.25625rem;
+  width: 100%;
+}
