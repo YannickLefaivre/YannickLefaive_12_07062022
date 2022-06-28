@@ -1,6 +1,7 @@
 import axios from 'axios'
 import HeaderData from './data-formatters/HeaderData.js'
 import DailyActivityData from './data-formatters/DailyActivityData.js'
+import DurationSessionsData from './data-formatters/DurationSessionsData.js'
 
 /**
  * Display a message in the console to warn that the HTTP call ended with an error.
@@ -46,6 +47,27 @@ export async function DailyActivityDataProvider(userId) {
     const dailyActivityData = new DailyActivityData(userActivitySessions)
 
     return dailyActivityData
+  } catch (error) {
+    warnThatHTTPCallFailed(error)
+  }
+}
+
+/**
+ *
+ * @param {Number} userId
+ *
+ * @return {Promise<DurationSessionsData | undefined>}
+ */
+export async function durationSessionsDataProvider(userId) {
+  try {
+    const response = await axios.get(
+      `http://localhost:3000/user/${userId}/average-sessions`
+    )
+    const userAverageSessions = response.data.data.sessions
+
+    const durationSessionsData = new DurationSessionsData(userAverageSessions)
+
+    return durationSessionsData
   } catch (error) {
     warnThatHTTPCallFailed(error)
   }
