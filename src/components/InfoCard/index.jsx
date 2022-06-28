@@ -107,7 +107,6 @@ function InfoCard({
         >
           {macronutrientCount + measuringUnit}
         </span>
-        <br />
         <span
           className={`info-card__macronutrient-data__type${
             styleModifier && styleModifier.macronutrientType
