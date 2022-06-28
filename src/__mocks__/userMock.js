@@ -125,7 +125,4 @@ export const user = {
     carbohydrateCount: 150,
     lipidCount: 120,
   },
-  activity: activity,
-  averageSession: averageSession,
-  performance: performance,
 }

@@ -2,6 +2,28 @@ import FormatString from './FormatString'
 
 export default class TypeOfActivityData {
   /**
+   *
+   * @param {Object[]} activities
+   * @param {Number} activities.value
+   * @param {Number} activities.kind
+   *
+   * @param {Object} kindOfActivity
+   * @param {String} kindOfActivity.1
+   * @param {String} kindOfActivity.2
+   * @param {String} kindOfActivity.3
+   * @param {String} kindOfActivity.4
+   * @param {String} kindOfActivity.5
+   * @param {String} kindOfActivity.6
+   * @param {String} kindOfActivity.7
+   */
+  constructor(activities, kindOfActivity) {
+    this.userPerformance = this.formatKindPropOfAllActivityObject(
+      activities,
+      kindOfActivity
+    )
+  }
+
+  /**
    * Change the value of the prop kind of each
    * activity object from a number corresponding to
    * a type of activity to a descriptive string.
@@ -18,7 +40,7 @@ export default class TypeOfActivityData {
    *
    * @returns {Object[]} A array of activity object
    */
-  static formatKindPropOfAllActivityObject = (activities, kindOfActivity) => {
+  formatKindPropOfAllActivityObject = (activities, kindOfActivity) => {
     return activities.map((activity) => {
       for (const property in kindOfActivity) {
         if (property === activity.kind.toString()) {

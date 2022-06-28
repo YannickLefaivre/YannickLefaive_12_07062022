@@ -4,7 +4,7 @@ import Profile from '../../routes/Profile'
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Profile />} />
+      <Route path="/:userId" element={<Profile />} />
     </Routes>
   )
 }

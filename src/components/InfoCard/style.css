@@ -27,7 +27,7 @@
 .info-card__macronutrient-data {
   display: flex;
   flex-direction: column;
-  row-gap: 0.125rem;
+  row-gap: 0.5rem;
 }
 
 .info-card__macronutrient-data__count {
