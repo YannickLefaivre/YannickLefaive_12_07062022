@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts'
+import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts'
 import { durationSessionsDataProvider } from '../../utils/providers.js'
 import CustomAxisTick from '../CustomAxisTick/index.jsx'
 import CustomTooltip from '../CustomTooltip'
@@ -8,6 +8,16 @@ import Loader from '../Loader'
 import Error from '../Error'
 import './style.css'
 
+/**
+ * @credits I was able to reproduce the visual
+ * effect that appears when hovering over the line
+ * chart when the tooltip is active by understanding
+ * and following a tip that was shared by another
+ * student on OpenClassrooms Workplace.
+ *
+ *
+ * @returns {JSX.Element} A DurationSessions component
+ */
 function DurationSessions() {
   const [isLoading, setLoading] = useState(true)
   const [durationSessionsData, setDurationSessionsData] = useState([])
@@ -16,6 +26,25 @@ function DurationSessions() {
   const { userId } = useParams()
 
   const customXAxisMargin = 19.52
+
+  const displayTheVisualEffect = (e) => {
+    const durationSessionsChart = document.querySelector(
+      '.duration-sessions-chart'
+    )
+
+    if (e.isTooltipActive === true) {
+      const lineChart = document.querySelector(
+        '.duration-sessions-chart__line-chart'
+      )
+      const lineChartWidth = lineChart.clientWidth
+
+      const colorStopPourcentage = (e.activeCoordinate.x / lineChartWidth) * 100
+
+      durationSessionsChart.style.backgroundImage = `linear-gradient(90deg, rgba(var(--primary-color), 1) ${colorStopPourcentage}%, rgba(var(--primary-color-alternate-dark), 1.5) ${colorStopPourcentage}%, rgba(var(--primary-color-alternate-dark), 1.5) 100%)`
+    } else {
+      durationSessionsChart.style.backgroundImage = null
+    }
+  }
 
   useEffect(() => {
     const getDurationSessionsData = async () => {
@@ -43,9 +72,11 @@ function DurationSessions() {
         <Error />
       ) : (
         <ResponsiveContainer>
-          <AreaChart
+          <LineChart
+            className="duration-sessions-chart__line-chart"
+            onMouseMove={(e) => displayTheVisualEffect(e)}
             data={durationSessionsData.userAverageSessions}
-            margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+            margin={{ top: 77.52, left: 0, bottom: 16, right: 0 }}
           >
             <defs>
               <linearGradient
@@ -64,21 +95,21 @@ function DurationSessions() {
               </linearGradient>
             </defs>
             <text
-              x={0}
-              y={0}
+              x={34}
+              y={29}
               dominantBaseline="hanging"
               className="duration-sessions-chart__title"
             >
               Durée moyenne des
-              <tspan x={0} y={24}>
+              <tspan x={34} y={29 + 24}>
                 sessions
               </tspan>
             </text>
             <XAxis
               axisLine={false}
               dataKey="day"
-              height={24 + customXAxisMargin}
-              padding={{ left: 14, right: 16 }}
+              height={15 + customXAxisMargin}
+              interval="preserveStartEnd"
               tick={<CustomAxisTick />}
               tickLine={false}
               tickMargin={customXAxisMargin}
@@ -94,7 +125,7 @@ function DurationSessions() {
                 />
               }
             />
-            <Area
+            <Line
               activeDot={{
                 fill: 'rgb(var(--text-light))',
                 strokeWidth: 10,
@@ -109,7 +140,7 @@ function DurationSessions() {
               strokeWidth={1.8}
               type="monotone"
             />
-          </AreaChart>
+          </LineChart>
         </ResponsiveContainer>
       )}
     </div>
