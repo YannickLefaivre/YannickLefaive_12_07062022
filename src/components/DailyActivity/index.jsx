@@ -159,7 +159,7 @@ function DailyActivity() {
             />
             <Bar
               dataKey="calories"
-              fill="rgb(var(--primary-color-alternate))"
+              fill="rgb(var(--primary-color-alternate-light))"
               radius={[3, 3, 0, 0]}
             />
           </BarChart>

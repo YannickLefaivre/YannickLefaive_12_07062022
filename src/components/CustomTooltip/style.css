@@ -1,6 +1,6 @@
 .custom-tooltip {
   align-items: center;
-  background-color: rgb(var(--primary-color-alternate));
+  background-color: rgb(var(--primary-color-alternate-light));
   display: flex;
   flex-direction: column;
   height: 3.9375rem;
