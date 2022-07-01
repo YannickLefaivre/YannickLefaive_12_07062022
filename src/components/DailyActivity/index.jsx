@@ -10,7 +10,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-import { DailyActivityDataProvider } from '../../utils/providers.js'
+import { dailyActivityDataProvider } from '../../utils/providers.js'
 import CustomLegend from '../CustomLegend'
 import CustomTooltip from '../CustomTooltip'
 import Loader from '../Loader'
@@ -41,7 +41,7 @@ function DailyActivity() {
   useEffect(() => {
     const getDailyActivityData = async () => {
       try {
-        const data = await DailyActivityDataProvider(userId)
+        const data = await dailyActivityDataProvider(userId)
 
         setDailayActivityData(data)
       } catch (err) {

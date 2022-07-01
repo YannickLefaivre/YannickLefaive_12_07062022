@@ -1,39 +1,41 @@
-.daily-activity-chart {
-  background-color: rgb(var(--chart-background-color));
-  border-radius: var(--small-rounded-corner);
-  box-sizing: border-box;
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.0212);
-  grid-column: 1 / -1;
-  grid-row: 1;
-  height: 100%;
-  padding-block: 1.46875rem;
-  padding-inline: 1.8125rem 2.6875rem;
-  width: 100%;
-}
+@media (min-width: 1024px) {
+  .daily-activity-chart {
+    background-color: rgb(var(--chart-background-color));
+    border-radius: var(--small-rounded-corner);
+    box-sizing: border-box;
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.0212);
+    grid-column: 1 / -1;
+    grid-row: 1;
+    height: 100%;
+    padding-block: 1.46875rem;
+    padding-inline: 1.8125rem 2.6875rem;
+    width: 100%;
+  }
 
-.daily-activity-chart__title {
-  fill: rgb(var(--chart-heading-level-1-dark));
-  text-anchor: start;
-}
+  .daily-activity-chart__title {
+    fill: rgb(var(--chart-heading-level-1-dark));
+    text-anchor: start;
+  }
 
-/* Custom legend */
+  /* Custom legend */
 
-.custom-legend__item {
-  display: flex;
-  align-items: center;
-  margin-right: 1rem;
-}
+  .custom-legend__item {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
 
-.custom-legend__item__icon {
-  color: rgb(var(--secondary-color));
-}
+  .custom-legend__item__icon {
+    color: rgb(var(--secondary-color));
+  }
 
-.custom-legend__item__icon--calories {
-  color: rgb(var(--primary-color));
-}
+  .custom-legend__item__icon--calories {
+    color: rgb(var(--primary-color));
+  }
 
-.custom-legend__item__text {
-  color: rgb(var(--tertiary-color));
-  font-size: var(--desktop-font-size-14px-in-rem);
-  margin-left: 0.75rem;
+  .custom-legend__item__text {
+    color: rgb(var(--tertiary-color));
+    font-size: var(--desktop-font-size-14px-in-rem);
+    margin-left: 0.75rem;
+  }
 }

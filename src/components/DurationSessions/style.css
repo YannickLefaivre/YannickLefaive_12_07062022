@@ -1,27 +1,29 @@
-.duration-sessions-chart {
-  background-color: rgb(var(--primary-color));
-  box-sizing: border-box;
-  border-radius: var(--small-rounded-corner);
-  box-shadow: var(--sportsee-box-shadow);
-  grid-column: 1;
-  grid-row: 2;
-  height: 100%;
-  width: 100%;
-}
+@media (min-width: 1024px) {
+  .duration-sessions-chart {
+    background-color: rgb(var(--primary-color));
+    box-sizing: border-box;
+    border-radius: var(--small-rounded-corner);
+    box-shadow: var(--sportsee-box-shadow);
+    grid-column: 1;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+  }
 
-.duration-sessions-chart__title {
-  fill: rgba(var(--text-light), 0.5);
-  font-size: var(--desktop-font-size-15px-in-rem);
-}
+  .duration-sessions-chart__title {
+    fill: rgba(var(--text-light), 0.5);
+    font-size: var(--desktop-font-size-15px-in-rem);
+  }
 
-/* Custom tooltip modifier */
+  /* Custom tooltip modifier */
 
-.custom-tooltip--line-chart {
-  background-color: rgb(var(--text-light));
-  height: 1.5625rem;
-}
+  .custom-tooltip--line-chart {
+    background-color: rgb(var(--text-light));
+    height: 1.5625rem;
+  }
 
-.custom-tooltip__label--line-chart {
-  color: rgb(var(--text-dark));
-  font-size: var(--desktop-font-size-8px-in-rem);
+  .custom-tooltip__label--line-chart {
+    color: rgb(var(--text-dark));
+    font-size: var(--desktop-font-size-8px-in-rem);
+  }
 }
