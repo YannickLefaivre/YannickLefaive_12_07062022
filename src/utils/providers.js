@@ -1,5 +1,5 @@
 import axios from 'axios'
-import HeaderData from './data-formatters/HeaderData.js'
+import MainContentHeaderData from './data-formatters/MainContentHeaderData.js'
 import DailyActivityData from './data-formatters/DailyActivityData.js'
 import DurationSessionsData from './data-formatters/DurationSessionsData.js'
 import TypeOfActivityData from './data-formatters/TypeOfActivityData.js'
@@ -19,16 +19,16 @@ const warnThatHTTPCallFailed = (error) => {
  *
  * @param {Number} userId
  *
- * @return {Promise<HeaderData | undefined>}
+ * @return {Promise<MainContentHeaderData | undefined>}
  */
-export async function HeaderDataProvider(userId) {
+export async function mainContentHeaderDataProvider(userId) {
   try {
     const response = await axios.get(`http://localhost:3000/user/${userId}`)
     const userInfos = response.data.data.userInfos
 
-    const headerData = new HeaderData(userInfos)
+    const mainContentHeader = new MainContentHeaderData(userInfos)
 
-    return headerData
+    return mainContentHeader
   } catch (error) {
     warnThatHTTPCallFailed(error)
   }

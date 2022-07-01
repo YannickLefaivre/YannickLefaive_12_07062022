@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { dashboardDataProvider } from '../../utils/providers.js'
-import Header from '../../components/Header'
+import MainContentHeader from '../../components/MainContentHeader'
 import DailyActivity from '../../components/DailyActivity'
 import DurationSessions from '../../components/DurationSessions'
 import TypeOfActivity from '../../components/TypeOfActivity'
@@ -36,7 +36,7 @@ function Dashboard() {
 
   return (
     <main className="main-content dashboard">
-      <Header />
+      <MainContentHeader />
       <div className="dashboard-user-statistics">
         <DailyActivity />
         <DurationSessions />
