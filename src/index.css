@@ -6,6 +6,7 @@
   /* Border radius */
 
   --small-rounded-corner: 0.3125rem;
+  --border-radius-icon-container: 0.375rem;
 
   /* Box shadow */
 
@@ -169,8 +170,14 @@ p {
   padding: 0;
 }
 
-/* Main content */
+@media (min-width: 1024px) {
+  .main-content {
+    margin: 3.4375rem auto 5.375rem;
+  }
+}
 
-.main-content {
-  margin: 4.25rem 6.6875rem 5.375rem;
+@media (min-width: 1440px) {
+  .main-content {
+    margin: 4.25rem auto 5.375rem;
+  }
 }
