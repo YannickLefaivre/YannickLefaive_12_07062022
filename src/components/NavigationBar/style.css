@@ -1,0 +1,16 @@
+.navigation-bar {
+  align-items: center;
+  background-color: rgb(var(--navigation-bar-background-color));
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navigation-bar__link-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 62.125rem;
+}
