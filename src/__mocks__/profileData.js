@@ -5,7 +5,7 @@ import proteinIcon from '../assets/icons/icon-protein.svg'
 import * as userMock from '../__mocks__/userMock.js'
 import FormatString from '../utils/data-formatters/FormatString'
 
-export const profileData = [
+export const dashboardData = [
   {
     macronutrientIconURL: calorieIcon,
     macronutrientType: 'Calories',

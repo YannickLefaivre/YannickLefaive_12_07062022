@@ -1,10 +1,10 @@
 import axios from 'axios'
-import HeaderData from './data-formatters/HeaderData.js'
+import MainContentHeaderData from './data-formatters/MainContentHeaderData.js'
 import DailyActivityData from './data-formatters/DailyActivityData.js'
 import DurationSessionsData from './data-formatters/DurationSessionsData.js'
 import TypeOfActivityData from './data-formatters/TypeOfActivityData.js'
 import AverageScoreData from './data-formatters/AverageScoreData.js'
-import ProfileData from './data-formatters/ProfileData.js'
+import DashboardData from './data-formatters/DashboardData.js'
 
 /**
  * Display a message in the console to warn that the HTTP call ended with an error.
@@ -19,16 +19,16 @@ const warnThatHTTPCallFailed = (error) => {
  *
  * @param {Number} userId
  *
- * @return {Promise<HeaderData | undefined>}
+ * @return {Promise<MainContentHeaderData | undefined>}
  */
-export async function HeaderDataProvider(userId) {
+export async function mainContentHeaderDataProvider(userId) {
   try {
     const response = await axios.get(`http://localhost:3000/user/${userId}`)
     const userInfos = response.data.data.userInfos
 
-    const headerData = new HeaderData(userInfos)
+    const mainContentHeader = new MainContentHeaderData(userInfos)
 
-    return headerData
+    return mainContentHeader
   } catch (error) {
     warnThatHTTPCallFailed(error)
   }
@@ -40,7 +40,7 @@ export async function HeaderDataProvider(userId) {
  *
  * @return {Promise<DailyActivityData | undefined>}
  */
-export async function DailyActivityDataProvider(userId) {
+export async function dailyActivityDataProvider(userId) {
   try {
     const response = await axios.get(
       `http://localhost:3000/user/${userId}/activity`
@@ -131,16 +131,16 @@ export async function averageScoreDataProvider(userId) {
  *
  * @param {Number} userId
  *
- * @returns {Promise<ProfileData | undefined>}
+ * @returns {Promise<DashboardData | undefined>}
  */
-export async function profileDataProvider(userId) {
+export async function dashboardDataProvider(userId) {
   try {
     const response = await axios.get(`http://localhost:3000/user/${userId}`)
     const userKeyData = response.data.data.keyData
 
-    const profileData = new ProfileData(userKeyData)
+    const dashboardData = new DashboardData(userKeyData)
 
-    return profileData
+    return dashboardData
   } catch (error) {
     warnThatHTTPCallFailed(error)
   }

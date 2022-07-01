@@ -1,0 +1,74 @@
+@media (min-width: 1024px) {
+  .dashboard {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    grid-column: 2;
+    grid-row: 2;
+    max-width: 52.125rem;
+  }
+
+  .dashboard-user-statistics {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(3, var(--column-size));
+    grid-template-rows: 20rem 16.4375rem;
+    gap: 1.875rem;
+  }
+
+  .dashboard__key-infos {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 2.4375rem;
+    justify-content: space-between;
+    margin-top: 1.9375rem;
+    width: 100%;
+  }
+
+  /* Infos card style modifier */
+
+  .info-card__icon-container--calorie {
+    background-color: rgba(var(--primary-color), 0.1);
+  }
+
+  .info-card__icon-container--protein {
+    background-color: rgba(
+      var(--info-card-protein-icon-container-background-color)
+    );
+  }
+
+  .info-card__icon-container--carbohydrate {
+    background-color: rgba(
+      var(--info-card-carbohydrate-icon-container-background-color)
+    );
+  }
+
+  .info-card__icon-container--lipid {
+    background-color: rgba(
+      var(--info-card-lipid-icon-container-background-color)
+    );
+  }
+}
+
+@media (min-width: 1378px) {
+  .dashboard {
+    max-width: calc(100vw - 254px);
+  }
+
+  .dashboard__key-infos {
+    margin-top: 0;
+    width: 16.125rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .dashboard {
+    max-width: calc(100vw - 314px);
+  }
+}
+
+@media (min-width: 1501px) {
+  .dashboard {
+    justify-content: flex-start;
+  }
+}

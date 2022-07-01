@@ -1,0 +1,29 @@
+@media (min-width: 1024px) {
+  .navigation-bar-wrapper--top-navbar {
+    flex-direction: row;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    height: 5.6875rem;
+    padding-inline: 1.8125rem 5.4375rem;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* Navigation bar children style */
+
+  .navigation-bar__company-logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 9.3125rem;
+  }
+
+  .navigation-bar__link-list__item {
+    font-size: var(--desktop-font-size-24px-in-rem);
+  }
+
+  .navigation-bar__link-list__item__navlink {
+    color: rgb(var(--primary-color));
+    text-decoration: underline;
+  }
+}

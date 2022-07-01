@@ -1,4 +1,4 @@
-export default class HeaderData {
+export default class MainContentHeaderData {
   /**
    *
    * @param {Object} userInfos

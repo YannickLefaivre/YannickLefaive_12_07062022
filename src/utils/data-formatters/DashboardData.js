@@ -1,10 +1,10 @@
 import InfoCardData from './InfoCardData.js'
-import calorieIcon from '../../assets/icons/icon-calorie.svg'
-import proteinIcon from '../../assets/icons/icon-protein.svg'
-import carbohydrateIcon from '../../assets/icons/icon-carbohydrate.svg'
-import lipidIcon from '../../assets/icons/icon-lipid.svg'
+import calorieIcon from '../../assets/icons/calorie.svg'
+import proteinIcon from '../../assets/icons/protein.svg'
+import carbohydrateIcon from '../../assets/icons/carbohydrate.svg'
+import lipidIcon from '../../assets/icons/lipid.svg'
 
-export default class ProfileData {
+export default class DashboardData {
   /**
    * @typedef {{
    *  caloriesCount: number,
