@@ -40,7 +40,7 @@ export async function mainContentHeaderDataProvider(userId) {
  *
  * @return {Promise<DailyActivityData | undefined>}
  */
-export async function DailyActivityDataProvider(userId) {
+export async function dailyActivityDataProvider(userId) {
   try {
     const response = await axios.get(
       `http://localhost:3000/user/${userId}/activity`
