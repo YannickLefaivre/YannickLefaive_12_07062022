@@ -49,9 +49,7 @@ function TypeOfActivity() {
   return (
     <div className="type-of-activity-chart">
       {isLoading ? (
-        <Loader>
-          <p>Chargement des données de la page...</p>
-        </Loader>
+        <Loader />
       ) : error ? (
         <Error />
       ) : (

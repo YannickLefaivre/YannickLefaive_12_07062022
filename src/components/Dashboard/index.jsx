@@ -45,9 +45,7 @@ function Dashboard() {
       </div>
       <div className="dashboard__key-infos">
         {isLoading ? (
-          <Loader>
-            <p>Chargement des données de la page...</p>
-          </Loader>
+          <Loader />
         ) : error ? (
           <Error />
         ) : (

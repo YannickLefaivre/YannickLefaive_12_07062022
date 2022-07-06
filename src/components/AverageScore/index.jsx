@@ -38,9 +38,7 @@ function AverageScore() {
   return (
     <div className="average-score-chart">
       {isLoading ? (
-        <Loader>
-          <p>Chargement des données de la page...</p>
-        </Loader>
+        <Loader />
       ) : error ? (
         <Error />
       ) : (

@@ -31,9 +31,7 @@ function MainContentHeader() {
   return (
     <header className="main-content-header">
       {isLoading ? (
-        <Loader>
-          <p>Chargement des données de la page...</p>
-        </Loader>
+        <Loader />
       ) : error ? (
         <Error />
       ) : (
