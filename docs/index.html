@@ -48,44 +48,37 @@
 
 
     <section class="readme">
-        <article><h1>Getting Started with Create React App</h1>
-<p>This project was bootstrapped with <a href="https://github.com/facebook/create-react-app">Create React App</a>.</p>
-<h2>Available Scripts</h2>
-<p>In the project directory, you can run:</p>
-<h3><code>npm start</code></h3>
-<p>Runs the app in the development mode.<br>
-Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in your browser.</p>
-<p>The page will reload when you make changes.<br>
-You may also see any lint errors in the console.</p>
-<h3><code>npm test</code></h3>
-<p>Launches the test runner in the interactive watch mode.<br>
-See the section about <a href="https://facebook.github.io/create-react-app/docs/running-tests">running tests</a> for more information.</p>
-<h3><code>npm run build</code></h3>
-<p>Builds the app for production to the <code>build</code> folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.</p>
-<p>The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!</p>
-<p>See the section about <a href="https://facebook.github.io/create-react-app/docs/deployment">deployment</a> for more information.</p>
-<h3><code>npm run eject</code></h3>
-<p><strong>Note: this is a one-way operation. Once you <code>eject</code>, you can't go back!</strong></p>
-<p>If you aren't satisfied with the build tool and configuration choices, you can <code>eject</code> at any time. This command will remove the single build dependency from your project.</p>
-<p>Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except <code>eject</code> will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.</p>
-<p>You don't have to ever use <code>eject</code>. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.</p>
-<h2>Learn More</h2>
-<p>You can learn more in the <a href="https://facebook.github.io/create-react-app/docs/getting-started">Create React App documentation</a>.</p>
-<p>To learn React, check out the <a href="https://reactjs.org/">React documentation</a>.</p>
-<h3>Code Splitting</h3>
-<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/code-splitting">https://facebook.github.io/create-react-app/docs/code-splitting</a></p>
-<h3>Analyzing the Bundle Size</h3>
-<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size">https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size</a></p>
-<h3>Making a Progressive Web App</h3>
-<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app">https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app</a></p>
-<h3>Advanced Configuration</h3>
-<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/advanced-configuration">https://facebook.github.io/create-react-app/docs/advanced-configuration</a></p>
-<h3>Deployment</h3>
-<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/deployment">https://facebook.github.io/create-react-app/docs/deployment</a></p>
-<h3><code>npm run build</code> fails to minify</h3>
-<p>This section has moved here: <a href="https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify">https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify</a></p></article>
+        <article><h1>SportSee - front end of the user’s profile page (new version)</h1>
+<p>This repository contains the code for the new version of the SportSee sports analytics dashboard user profile page.</p>
+<h2>1. How to install the application</h2>
+<h2>1.1 Prerequisites</h2>
+<h4>1.1.A Tools</h4>
+<ul>
+<li><a href="https://nodejs.org/en/">Node.js (version 16.15.1)</a></li>
+<li><a href="https://www.npmjs.com/">npm (version 8.11.0)</a></li>
+<li><a href="https://yarnpkg.com/">yarn (version 1.22.19, to install and run the API)</a></li>
+</ul>
+<h4>1.1.B API</h4>
+<p>This project uses a micro API to retrieve data from sample users. Once you have installed it by following the instructions in the <a href="https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard">README file of the backend repository,</a> you can proceed to the front end installation.</p>
+<p>I recommend that you create a folder on your computer that will contain the back and front code:</p>
+<pre class="prettyprint source"><code>- sportsee
+    - back
+    - front
+</code></pre>
+<blockquote>
+<p>Note: it says that the API requires a certain version of NodeJS, be aware that you can use a different version for the user interface without causing a problem of compatibility with the API.</p>
+</blockquote>
+<h3>1.2 Launch the project</h3>
+<ul>
+<li>Clone it on your computer,</li>
+<li>The command <code>npm install</code> will allow you to install the project dependencies,</li>
+<li>The command <code>npm run start</code> will allow you to run the user interface.</li>
+</ul>
+<blockquote>
+<p>Note: in the command interface, when running the <code>npm run start</code> command you will have to agree to change the port because the API already uses port 3000.</p>
+</blockquote>
+<h2>2. Consult the documentation</h2>
+<p>Documentation of the code can be found in the docs folder. By opening the <a href="https://yannicklefaivre.github.io/YannickLefaive_12_07062022/">project github page</a>, you will have access to this file <em>(README.md)</em> as well as to the documentation of the classes, functions and methods of this project.</p></article>
     </section>
 
 
@@ -98,7 +91,7 @@ Your app is ready to be deployed!</p>
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Jul 05 2022 20:37:30 GMT-0400 (heure normale de l’Amazonie) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Wed Jul 06 2022 12:25:01 GMT-0400 (heure normale de l’Amazonie) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

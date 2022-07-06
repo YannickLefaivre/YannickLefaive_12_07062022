@@ -7,21 +7,25 @@ export const AuthContext = createContext(null)
 /**
  * @param {Object} props - The properties of this
  * component.
- * @param {React.ReactNode} props.children -
- * The child elements of this functional component.
  *
- * @returns {JSX.Element} A AuthContextProvider component
+ * @param {React.ReactNode} props.children -
+ * The components that will use the provider's data.
+ *
+ * @returns {JSX.Element} A AuthContextProvider component.
  */
 function AuthContextProvider({ children }) {
   const [user, setUser] = useState(null)
 
   /**
+   * Allows you to authenticate a user and save
+   * their data in the state `user` in order to use
+   * it to remember that they are logged in.
    *
-   * @param {Object} newUser
+   * @param {Object} newUser The data of a newly logged in user.
    * @param {Number} newUser.id
    * @param {String} newUser.email
    * @param {String} newUser.password
-   * @param {CallableFunction} navigateFunction
+   * @param {import('react-router-dom').NavigateFunction} navigateFunction
    *
    * @returns {void}
    */
@@ -34,7 +38,7 @@ function AuthContextProvider({ children }) {
 
   /**
    *
-   * @param {CallableFunction} navigateFunction
+   * @param {import('react-router-dom').NavigateFunction} navigateFunction
    *
    * @returns {void}
    */
