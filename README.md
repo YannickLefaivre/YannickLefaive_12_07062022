@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# SportSee - front end of the user’s profile page (new version)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the code for the new version of the SportSee sports analytics dashboard user profile page.
 
-## Available Scripts
+## 1. How to install the application
 
-In the project directory, you can run:
+## 1.1 Prerequisites
 
-### `npm start`
+#### 1.1.A Tools
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Node.js (version 16.15.1)](https://nodejs.org/en/)
+- [npm (version 8.11.0)](https://www.npmjs.com/)
+- [yarn (version 1.22.19, to install and run the API)](https://yarnpkg.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 1.1.B API
 
-### `npm test`
+This project uses a micro API to retrieve data from sample users. Once you have installed it by following the instructions in the [README file of the backend repository,](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard) you can proceed to the front end installation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I recommend that you create a folder on your computer that will contain the back and front code:
 
-### `npm run build`
+```
+- sportsee
+    - back
+    - front
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Note: it says that the API requires a certain version of NodeJS, be aware that you can use a different version for the user interface without causing a problem of compatibility with the API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1.2 Launch the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone it on your computer,
+- The command `npm install` will allow you to install the project dependencies,
+- The command `npm run start` will allow you to run the user interface.
 
-### `npm run eject`
+> Note: Note: in the command interface, when running the `npm run start` command you will have to agree to change the port because the API already uses port 3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 2. Consult the documentation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Documentation of the code can be found in the docs folder. By opening the [project github page](https://yannicklefaivre.github.io/YannickLefaive_12_07062022/), you will have access to this file as well as to the description (and others) of the classes, functions and methods used in this project.
