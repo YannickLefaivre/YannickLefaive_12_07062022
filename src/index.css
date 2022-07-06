@@ -183,12 +183,6 @@ a:active {
   color: rgb(var(--primary-color-alternate-light));
 }
 
-@media (min-width: 1024px) {
-  .main-content {
-    margin: 3.4375rem auto 5.375rem;
-  }
-}
-
 /* Application navigation bar */
 
 .navigation-bar-wrapper {
@@ -198,8 +192,24 @@ a:active {
   justify-content: center;
 }
 
+/* main content */
+
+@media (min-width: 1024px) {
+  .app-layout {
+    display: grid;
+    grid-template-columns: 7.3125rem 1fr;
+    width: 100%;
+  }
+
+  .app-layout__main-content {
+    margin: 3.4375rem auto 5.375rem;
+  }
+}
+
 @media (min-width: 1440px) {
-  .main-content {
+  .app-layout__main-content {
+    grid-column: 2;
+    grid-row: 2;
     margin: 4.25rem auto 5.375rem;
   }
 }

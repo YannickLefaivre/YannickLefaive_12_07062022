@@ -66,9 +66,11 @@ export async function durationSessionsDataProvider(userId) {
     const response = await axios.get(
       `http://localhost:3000/user/${userId}/average-sessions`
     )
-    const userAverageSessions = response.data.data.sessions
+    const durationOfUserSessions = response.data.data.sessions
 
-    const durationSessionsData = new DurationSessionsData(userAverageSessions)
+    const durationSessionsData = new DurationSessionsData(
+      durationOfUserSessions
+    )
 
     return durationSessionsData
   } catch (error) {
@@ -90,12 +92,12 @@ export async function typeOfActivityDataProvider(userId) {
     const userActivities = response.data.data.data
     const kindOfActivity = response.data.data.kind
 
-    const durationSessionsData = new TypeOfActivityData(
+    const typeOfActivityData = new TypeOfActivityData(
       userActivities,
       kindOfActivity
     )
 
-    return durationSessionsData
+    return typeOfActivityData
   } catch (error) {
     warnThatHTTPCallFailed(error)
   }
@@ -117,11 +119,11 @@ export async function averageScoreDataProvider(userId) {
       ? response.data.data.score
       : response.data.data.todayScore
 
-    const durationSessionsData = [
+    const averageScoreData = [
       new AverageScoreData(completionOfTheUsersDailyObjective),
     ]
 
-    return durationSessionsData
+    return averageScoreData
   } catch (error) {
     warnThatHTTPCallFailed(error)
   }
