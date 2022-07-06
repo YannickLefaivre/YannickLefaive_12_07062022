@@ -13,13 +13,16 @@ import Error from '../Error'
 import './style.css'
 
 /**
- * @credits the accepted answer of the linked
- * url lead me to learn, with MDN Docs, how to
- * better detect and iterate on object properties
- * and therefore succeed to format the kind prop of the
- * objects of the typeOfActivityData array.
+ * Displays the type of activity performed by the
+ * user authenticate as a RadialBarChart.
  *
- * @see https://stackoverflow.com/questions/46059200/compare-two-objects-properties-in-js
+ * @credits [the accepted answer to a question about
+ * comparing the properties of two objects published
+ * on stackoverflow](https://stackoverflow.com/questions/46059200/compare-two-objects-properties-in-js)
+ * led me to learn, with MDN Docs,
+ * how to better detect and iterate on the properties
+ * of objects and thus succeed in formatting the prop
+ * kind of objects of the array typeOfActivityData.
  *
  * @returns {JSX.Element} A TypeOfActivity component.
  */

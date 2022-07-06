@@ -1,6 +1,32 @@
-export default class FormatString {
-  static firstLetterToUpperCase = (string) => {
+/**
+ * Provides static methods for performing advanced
+ * formatting techniques on strings.
+ */
+class FormatString {
+  /**
+   *
+   * @param {String} string
+   *
+   * @returns {String}
+   */
+  static firstLetterToUpperCase(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
+  }
+
+  /**
+   *
+   * @param {Number} number
+   *
+   * @returns {String}
+   */
+  static putTheNumberInEnglishFormat(number) {
+    if (FormatString.toLocaleStringSupportsOptions()) {
+      return number.toLocaleString('en-US')
+    }
+
+    return new Error(
+      'Number.toLocalString() is not supported by the browser currently used to run the web application.'
+    )
   }
 
   /**
@@ -26,6 +52,10 @@ export default class FormatString {
     return dayNumber
   }
 
+  /**
+   *
+   * @returns {Boolean}
+   */
   static toLocaleStringSupportsOptions() {
     return !!(
       typeof Intl == 'object' &&
@@ -33,14 +63,6 @@ export default class FormatString {
       typeof Intl.NumberFormat == 'function'
     )
   }
-
-  static putTheNumberInEnglishFormat = (number) => {
-    if (FormatString.toLocaleStringSupportsOptions()) {
-      return number.toLocaleString('en-US')
-    }
-
-    return new Error(
-      'Number.toLocalString() is not supported by the browser currently used to run the web application.'
-    )
-  }
 }
+
+export default FormatString

@@ -5,6 +5,12 @@ import Loader from '../Loader'
 import Error from '../Error'
 import './style.css'
 
+/**
+ * Displays a greeting message and comment about
+ * the past performance of an authenticate user.
+ *
+ * @returns {JSX.Element} A MainContentHeader component.
+ */
 function MainContentHeader() {
   const [isLoading, setLoading] = useState(true)
   const [mainContentHeader, setMainContentHeaderData] = useState({})
