@@ -5,6 +5,10 @@ import { fakeAuthProvider } from '../../authentication/fakeAuthProvider.js'
 export const AuthContext = createContext(null)
 
 /**
+ * Provides methods to connect and disconnect a
+ * user from his account and a state saving his
+ * authentication information (id, email and password).
+ *
  * @param {Object} props - The properties of this
  * component.
  *
@@ -21,31 +25,40 @@ function AuthContextProvider({ children }) {
    * their data in the state `user` in order to use
    * it to remember that they are logged in.
    *
-   * @param {Object} newUser The data of a newly logged in user.
+   * @param {Object} newUser The data of a newly
+   * logged in user.
+   *
    * @param {Number} newUser.id
    * @param {String} newUser.email
    * @param {String} newUser.password
-   * @param {import('react-router-dom').NavigateFunction} navigateFunction
+   * @param {CallableFunction} callback A callback
+   * function that must use the navigate function
+   * of React Router DOM to send the user to a
+   * private page.
    *
    * @returns {void}
    */
-  const signin = (newUser, navigateFunction) => {
+  const signin = (newUser, callback) => {
     return fakeAuthProvider.signin(() => {
       setUser(newUser)
-      navigateFunction()
+      callback()
     })
   }
 
   /**
+   * Log out the user and reset the `user` state to null.
    *
-   * @param {import('react-router-dom').NavigateFunction} navigateFunction
+   * @param {CallableFunction} callback A callback
+   * function that must use React Router DOM's
+   * navigate function to send the user to the login
+   * page.
    *
    * @returns {void}
    */
-  const signout = (navigateFunction) => {
+  const signout = (callback) => {
     return fakeAuthProvider.logout(() => {
       setUser(null)
-      navigateFunction()
+      callback()
     })
   }
 
