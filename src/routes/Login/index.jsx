@@ -27,8 +27,18 @@ function Login() {
     const userOne = { id: 18, email: 'cecilia@test.fr' }
     const userTwo = { id: 12, email: 'karl@test.fr' }
 
-    const currentUserId =
-      userOne.email === emailEntered ? userOne.id : userTwo.id
+    const isUserOneEmail = emailEntered === userOne.email
+    const isUserTwoEmail = emailEntered === userTwo.email
+
+    if (!isUserOneEmail && !isUserTwoEmail) {
+      console.info(
+        'You must enter one of the following two email addresses: cecilia@test.fr or karl@test.fr. They are linked to the two simulated user IDs in the application API, 12 and 18, respectively.'
+      )
+
+      return
+    }
+
+    const currentUserId = isUserOneEmail ? userOne.id : userTwo.id
 
     const pathname = location.state?.from?.pathname || '/'
 
@@ -45,14 +55,6 @@ function Login() {
     }
 
     const from = getPreviousLocation()
-
-    if (!userOne.email && !userTwo.email) {
-      console.info(
-        'You must enter one of the following two email addresses: cecilia@test.fr or karl@test.fr. They are linked to the two simulated user IDs in the application API, 12 and 18, respectively.'
-      )
-
-      return
-    }
 
     const response = await axios.get(
       `http://localhost:3000/user/${currentUserId}`
