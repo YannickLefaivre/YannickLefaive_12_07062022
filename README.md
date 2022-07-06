@@ -10,7 +10,7 @@ This repository contains the code for the new version of the SportSee sports ana
 
 - [Node.js (version 16.15.1)](https://nodejs.org/en/)
 - [npm (version 8.11.0)](https://www.npmjs.com/)
-- [yarn (version 1.22.19, to install and run the API)](https://yarnpkg.com/)
+- [yarn (to install and run the API)](https://yarnpkg.com/)
 
 #### 1.1.B API
 
