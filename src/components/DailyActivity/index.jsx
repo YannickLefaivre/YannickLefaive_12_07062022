@@ -18,13 +18,23 @@ import Error from '../Error'
 import './style.css'
 
 /**
+ * Displays the daily activity of the authenticate
+ * user in the form of a BarChart. The latter shows
+ * information on weight and calories burned.
+ * The x-axis corresponds to the days of the
+ * current month. A tooltip appears when you hover
+ * over a set of two bars representing the weight
+ * and amount of calories burned in a day.
  *
- * Attribution:
+ * It also displays a compose caption of a text and
+ * a circle icon.
+ *
+ * @credits
  *  I learned how to integrate the chart title by follow
  *  the last solution given on the following
- *  [GitHub issue](https://github.com/recharts/recharts/issues/478)
+ *  [GitHub issue](https://github.com/recharts/recharts/issues/478).
  *
- * @returns
+ * @returns {JSX.Element} A DailyActivity component.
  */
 function DailyActivity() {
   const [isLoading, setLoading] = useState(true)
@@ -57,9 +67,7 @@ function DailyActivity() {
   return (
     <div className="daily-activity-chart">
       {isLoading ? (
-        <Loader>
-          <p>Chargement des données de la page...</p>
-        </Loader>
+        <Loader />
       ) : error ? (
         <Error />
       ) : (

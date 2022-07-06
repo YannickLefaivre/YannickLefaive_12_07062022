@@ -9,13 +9,19 @@ import DashboardData from './data-formatters/DashboardData.js'
 /**
  * Display a message in the console to warn that the HTTP call ended with an error.
  *
- * @param {Error} error - The error object returned from a failed call to fetch.
+ * @param {Error} error - The error object returned from a failed call to axios.get().
  */
 const warnThatHTTPCallFailed = (error) => {
   console.error('detailed information about the HTTP call failure.', error)
 }
 
 /**
+ * Retrieves general information from a user who
+ * has the id that was passed as an argument and
+ * creates an instance of the MainContentHeaderData
+ * object that will allow the component of the same
+ * name (without the word Data) to display the
+ * user’s first name on the dashboard.
  *
  * @param {Number} userId
  *
@@ -35,6 +41,10 @@ export async function mainContentHeaderDataProvider(userId) {
 }
 
 /**
+ * Retrieves the user’s weight and burned calorie
+ * information and uses it to create an instance of
+ * the DailyActivityData object that will be used
+ * to display this data as a BarChart.
  *
  * @param {Number} userId
  *
@@ -56,6 +66,10 @@ export async function dailyActivityDataProvider(userId) {
 }
 
 /**
+ * Retrieves information about the average duration
+ * of user sessions and creates an instance of the
+ * DurationSessionsData object that will be used to
+ * display this data as a LineChart.
  *
  * @param {Number} userId
  *
@@ -79,6 +93,10 @@ export async function durationSessionsDataProvider(userId) {
 }
 
 /**
+ * Retrieves information from the types of
+ * activities performed by the user to create an
+ * instance of the TypeOfActivityData object that
+ * will be used to display this data as a RadarChart.
  *
  * @param {Number} userId
  *
@@ -104,6 +122,10 @@ export async function typeOfActivityDataProvider(userId) {
 }
 
 /**
+ * Retrieves information about the average duration
+ * of the user's sessions and creates a
+ * DurationSessionsData object from them that will
+ * be used to display this data as a RadialBarChart.
  *
  * @param {Number} userId
  *
@@ -130,6 +152,11 @@ export async function averageScoreDataProvider(userId) {
 }
 
 /**
+ * Retrieves information about a user’s calories,
+ * proteins, carbohydrates and lipids of the day
+ * and creates an instance of the DashboardData
+ * object to display this data in the form of
+ * multiple information cards, one per macronutrient.
  *
  * @param {Number} userId
  *

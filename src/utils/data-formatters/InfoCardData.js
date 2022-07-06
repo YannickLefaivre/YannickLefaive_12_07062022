@@ -1,8 +1,13 @@
 import FormatString from './FormatString'
 
-export default class InfoCardData {
+/**
+ * This class is used to create a data structure
+ * with all the information needed to display the
+ * information maps from the data formatted by the
+ * DashboardData class.
+ */
+class InfoCardData {
   /**
-   *
    * @param {Object} macronutrientData
    * @param {String} macronutrientData.iconURL
    * @param {String} macronutrientData.type
@@ -18,3 +23,5 @@ export default class InfoCardData {
     this.macronutrientIconContainerCSSClass = iconContainerCSSClass
   }
 }
+
+export default InfoCardData

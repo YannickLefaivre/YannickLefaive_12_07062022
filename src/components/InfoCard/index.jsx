@@ -5,7 +5,9 @@ import './style.css'
  * Displays information about calories, proteins,
  * carbohydrates and fats of the day.
  *
- * @param {Object} props - The function component props.
+ * @param {Object} props - Properties of the
+ * functional component.
+ *
  * @param {String} props.macronutrientIconURL - The
  * URL of a macronutrient icon.
  *
@@ -21,9 +23,10 @@ import './style.css'
  * @param {String} props.measuringUnit - The unit
  * of measure of the macronutriment.
  *
- * @param {Object} [props.styleModifier=null] - Allows
- * you to change the style of the elements of the
- * information card.
+ * @param {Object} [props.styleModifier=null] -
+ * Allows you to add one or more BEM-type modifier
+ * CSS classes to customize the style of the
+ * elements making up the component.
  *
  * @param {String} [props.styleModifier.infoCardContainer=undefined] -
  * Allows you to change the style of the
