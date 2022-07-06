@@ -32,8 +32,8 @@ I recommend that you create a folder on your computer that will contain the back
 - The command `npm install` will allow you to install the project dependencies,
 - The command `npm run start` will allow you to run the user interface.
 
-> Note: Note: in the command interface, when running the `npm run start` command you will have to agree to change the port because the API already uses port 3000.
+> Note: in the command interface, when running the `npm run start` command you will have to agree to change the port because the API already uses port 3000.
 
 ## 2. Consult the documentation
 
-Documentation of the code can be found in the docs folder. By opening the [project github page](https://yannicklefaivre.github.io/YannickLefaive_12_07062022/), you will have access to this file as well as to the description (and others) of the classes, functions and methods used in this project.
+Documentation of the code can be found in the docs folder. By opening the [project github page](https://yannicklefaivre.github.io/YannickLefaive_12_07062022/), you will have access to this file _(README.md)_ as well as to the documentation of the classes, functions and methods of this project.

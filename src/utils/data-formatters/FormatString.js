@@ -4,7 +4,6 @@
  */
 class FormatString {
   /**
-   *
    * @param {String} string
    *
    * @returns {String}
@@ -14,7 +13,6 @@ class FormatString {
   }
 
   /**
-   *
    * @param {Number} number
    *
    * @returns {String}
@@ -53,7 +51,6 @@ class FormatString {
   }
 
   /**
-   *
    * @returns {Boolean}
    */
   static toLocaleStringSupportsOptions() {
