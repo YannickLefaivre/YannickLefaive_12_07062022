@@ -1,4 +1,4 @@
-import FormatDate from './FormatDate.js'
+import FormatString from './FormatString.js'
 
 export default class DailyActivityData {
   /**
@@ -12,7 +12,7 @@ export default class DailyActivityData {
   removeMonthAndYearNumberFrom = (sessions) => {
     const sessionsWithoutYearAndMonthNumberInDayProp = sessions.map(
       (session) => {
-        session.day = FormatDate.retrieveDayNumber(session.day)
+        session.day = FormatString.retrieveDayNumber(session.day)
 
         return session
       }
