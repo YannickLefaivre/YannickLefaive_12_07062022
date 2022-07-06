@@ -35,7 +35,7 @@ function Dashboard() {
   }, [])
 
   return (
-    <main className="main-content dashboard">
+    <main className="app-layout__main-content dashboard">
       <MainContentHeader />
       <div className="dashboard-user-statistics">
         <DailyActivity />

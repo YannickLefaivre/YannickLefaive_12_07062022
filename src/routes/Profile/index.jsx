@@ -5,7 +5,7 @@ import './style.css'
 
 function Profile() {
   return (
-    <div className="profile">
+    <div className="app-layout">
       <TopNavigationbar />
       <SideNavigationBar />
       <Dashboard />
