@@ -1,10 +1,8 @@
-import { useParams, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import NavigationBar from '../NavigationBar'
 import './style.css'
 
 function SideNavigationBar() {
-  const { userId } = useParams()
-
   return (
     <aside className="navigation-bar-wrapper navigation-bar-wrapper--side-navbar">
       <NavigationBar
@@ -21,7 +19,7 @@ function SideNavigationBar() {
                 ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
                 : 'navigation-bar__link-list__item__navlink--side-navbar'
             }
-            to={`/${userId}/Profile`}
+            to="/"
             aria-label="Yoga"
           >
             <svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32">
@@ -43,7 +41,7 @@ function SideNavigationBar() {
                 ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
                 : 'navigation-bar__link-list__item__navlink--side-navbar'
             }
-            to={`/${userId}/Profile`}
+            to="/"
             aria-label="Natation"
           >
             <svg
@@ -71,7 +69,7 @@ function SideNavigationBar() {
                 ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
                 : 'navigation-bar__link-list__item__navlink--side-navbar'
             }
-            to={`/${userId}/Profile`}
+            to="/"
             aria-label="Cyclisme"
           >
             <svg
@@ -95,7 +93,7 @@ function SideNavigationBar() {
                 ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
                 : 'navigation-bar__link-list__item__navlink--side-navbar'
             }
-            to={`/${userId}/Profile`}
+            to="/"
             aria-label="Musculation"
           >
             <svg aria-hidden="true" width="36" height="32" viewBox="0 0 36 32">

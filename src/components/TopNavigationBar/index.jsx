@@ -13,10 +13,7 @@ function TopNavigationbar() {
       <NavigationBar
         id="top-navbar"
         homepageLink={
-          <Link
-            className="navigation-bar__company-logo"
-            to={`/${userId}/Profile`}
-          >
+          <Link className="navigation-bar__company-logo" to="/">
             <img src={companyLogo} alt="Page d'accueil de SportSee" />
           </Link>
         }
@@ -26,7 +23,7 @@ function TopNavigationbar() {
             className={({ isActive }) =>
               isActive ? activeNavLinkClassName : ''
             }
-            to={`/${userId}/Profile`}
+            to="/"
           >
             Accueil
           </NavLink>
@@ -36,7 +33,7 @@ function TopNavigationbar() {
             className={({ isActive }) =>
               isActive ? activeNavLinkClassName : ''
             }
-            to={`/${userId}/Profile`}
+            to={`/${userId}`}
           >
             Profil
           </NavLink>
@@ -46,7 +43,7 @@ function TopNavigationbar() {
             className={({ isActive }) =>
               isActive ? activeNavLinkClassName : ''
             }
-            to={`/${userId}/Profile`}
+            to="/"
           >
             Réglage
           </NavLink>
@@ -56,7 +53,7 @@ function TopNavigationbar() {
             className={({ isActive }) =>
               isActive ? activeNavLinkClassName : ''
             }
-            to={`/${userId}/Profile`}
+            to="/"
           >
             Communauté
           </NavLink>
