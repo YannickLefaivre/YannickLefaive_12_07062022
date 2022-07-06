@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router'
 import RequireAuth from '../../routes/RequireAuth'
 import Login from '../../routes/Login'
 import Profile from '../../routes/Profile'
+import NotFound from '../../routes/NotFound'
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
           </RequireAuth>
         }
       />
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   )
 }
