@@ -1,23 +1,100 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { useAuth } from '../../utils/hooks/useAuth/index.jsx'
 import NavigationBar from '../NavigationBar'
 import './style.css'
 
-function SideNavigationBar() {
+/**
+ * Displays a side navigation menu with icons that
+ * will later allow the user to navigate between
+ * future navigation blocks.
+ *
+ * @param {Object} [props] Properties of the
+ * functional component.
+ *
+ * @param {Object} [props.styleModifier=null]
+ * Allows you to add one or more BEM-type modifier
+ * CSS classes to customize the style of the
+ * elements making up the component.
+ *
+ * @param {String} [props.styleModifier.navigationBarWrapper=undefined]
+ * Allows you to change the style of
+ * the side navigation bar wrapper.
+ *
+ * @param {String} [props.styleModifier.navigationBarContainer=undefined]
+ * Allows you to change the style of
+ * the navigation bar items container.
+ *
+ * @param {String} [props.styleModifier.linkList=undefined]
+ * Allows you to change the style of the link list
+ * container.
+ *
+ * @param {String} [props.styleModifier.link=undefined]
+ * Allows you to change the style of links.
+ *
+ * @param {String} [props.styleModifier.linkActiveState=undefined]
+ * Allows you to change the style of the navigation
+ * link whose page is the current one visited.
+ *
+ * @param {String} [props.styleModifier.logoutForm=undefined]
+ * Allows you to change the style of the logout form.
+ *
+ * @param {String} [props.styleModifier.logoutButton=undefined]
+ * Allows you to change the style of the logout button.
+ *
+ * @param {String} [props.styleModifier.copyright=undefined]
+ * Allows you to change the style of the copyright
+ * notice.
+ *
+ * @returns {JSX.Element} A SideNavigationMenu component
+ */
+function SideNavigationMenu({ styleModifier }) {
+  const auth = useAuth()
+  const navigate = useNavigate()
+
+  const handleClickOnLogoutButton = () => auth.signout(() => navigate('/'))
+
   return (
-    <aside className="navigation-bar-wrapper navigation-bar-wrapper--side-navbar">
+    <aside
+      className={`navigation-bar-wrapper navigation-bar-wrapper--side-navbar${
+        styleModifier && styleModifier.navigationBarWrapper
+          ? ` ${styleModifier.navigationBarWrapper}`
+          : ''
+      }`}
+    >
       <NavigationBar
         id="side-navbar"
         styleModifier={{
-          navigationBarContainer: 'navigation-bar--side-navbar',
-          linkList: 'navigation-bar__link-list--side-navbar',
+          navigationBarContainer: `navigation-bar--side-navbar${
+            styleModifier && styleModifier.navigationBarContainer
+              ? ` ${styleModifier.navigationBarContainer}`
+              : ''
+          }`,
+          linkList: `navigation-bar__link-list--side-navbar${
+            styleModifier && styleModifier.linkList
+              ? ` ${styleModifier.linkList}`
+              : ''
+          }`,
         }}
       >
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
-                : 'navigation-bar__link-list__item__navlink--side-navbar'
+                ? `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link} `
+                      : ' '
+                  }navigation-bar__link-list__item__navlink--side-navbar--active${
+                    styleModifier && styleModifier.linkActiveState
+                      ? ` ${styleModifier.linkActiveState}`
+                      : ''
+                  }`
+                : `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link}`
+                      : ''
+                  }`
             }
             to="/"
             aria-label="Yoga"
@@ -34,12 +111,25 @@ function SideNavigationBar() {
             </svg>
           </NavLink>
         </li>
+
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
-                : 'navigation-bar__link-list__item__navlink--side-navbar'
+                ? `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link} `
+                      : ' '
+                  }navigation-bar__link-list__item__navlink--side-navbar--active${
+                    styleModifier && styleModifier.linkActiveState
+                      ? ` ${styleModifier.linkActiveState}`
+                      : ''
+                  }`
+                : `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link}`
+                      : ''
+                  }`
             }
             to="/"
             aria-label="Natation"
@@ -62,12 +152,25 @@ function SideNavigationBar() {
             </svg>
           </NavLink>
         </li>
+
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
-                : 'navigation-bar__link-list__item__navlink--side-navbar'
+                ? `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link} `
+                      : ' '
+                  }navigation-bar__link-list__item__navlink--side-navbar--active${
+                    styleModifier && styleModifier.linkActiveState
+                      ? ` ${styleModifier.linkActiveState}`
+                      : ''
+                  }`
+                : `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link}`
+                      : ''
+                  }`
             }
             to="/"
             aria-label="Cyclisme"
@@ -86,12 +189,25 @@ function SideNavigationBar() {
             </svg>
           </NavLink>
         </li>
+
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? 'navigation-bar__link-list__item__navlink--side-navbar navigation-bar__link-list__item__navlink--side-navbar--active'
-                : 'navigation-bar__link-list__item__navlink--side-navbar'
+                ? `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link} `
+                      : ' '
+                  }navigation-bar__link-list__item__navlink--side-navbar--active${
+                    styleModifier && styleModifier.linkActiveState
+                      ? ` ${styleModifier.linkActiveState}`
+                      : ''
+                  }`
+                : `navigation-bar__link-list__item__navlink--side-navbar${
+                    styleModifier && styleModifier.link
+                      ? ` ${styleModifier.link}`
+                      : ''
+                  }`
             }
             to="/"
             aria-label="Musculation"
@@ -105,9 +221,48 @@ function SideNavigationBar() {
           </NavLink>
         </li>
       </NavigationBar>
-      <p className="navigation-bar__copyright">Copyright, SportSee 2020</p>
+
+      <form
+        className={`navigation-bar__logout-form${
+          styleModifier && styleModifier.logoutForm
+            ? ` ${styleModifier.logoutForm}`
+            : ''
+        }`}
+        id="logout-form"
+        method="GET"
+        onSubmit={handleClickOnLogoutButton}
+      >
+        <button
+          className={`navigation-bar__logout-form__button${
+            styleModifier && styleModifier.logoutButton
+              ? ` ${styleModifier.logoutButton}`
+              : ''
+          }`}
+          type="submit"
+        >
+          Se déconnecter
+        </button>
+      </form>
+
+      <p
+        className={`navigation-bar__copyright${
+          styleModifier && styleModifier.copyright
+            ? ` ${styleModifier.copyright}`
+            : ''
+        }`}
+      >
+        Copyright, SportSee 2020
+      </p>
     </aside>
   )
 }
 
-export default SideNavigationBar
+SideNavigationMenu.propTypes = {
+  styleModifier: PropTypes.object,
+}
+
+SideNavigationMenu.defaultProps = {
+  styleModifier: null,
+}
+
+export default SideNavigationMenu
