@@ -1,0 +1,37 @@
+.not-found__back-link {
+  color: rgb(var(--primary-color));
+  font-size: var(--desktop-font-size-18px-in-rem);
+  margin-top: 70px;
+}
+
+.not-found__back-link:hover,
+.not-found__back-link:active {
+  color: rgb(var(--text-dark));
+}
+
+/* Error component custom style */
+
+.error--not-found {
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.error__type--not-found {
+  color: rgb(var(--text-dark));
+  font-size: var(--desktop-font-size-48px-in-rem);
+}
+
+.error__message--not-found {
+  font-size: var(--desktop-font-size-24px-in-rem);
+  width: auto;
+}
+
+/* Side navigation bar custom style */
+
+.navigation-bar__logout-form--not-found {
+  display: none;
+}

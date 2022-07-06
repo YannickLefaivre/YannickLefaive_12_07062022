@@ -4,36 +4,50 @@ import proteinIcon from '../../assets/icons/protein.svg'
 import carbohydrateIcon from '../../assets/icons/carbohydrate.svg'
 import lipidIcon from '../../assets/icons/lipid.svg'
 
-export default class DashboardData {
+/**
+ * A class that can format key user information,
+ * such as the amount of macronutrient *(calories,
+ * lipid, carbohydrates, protein)* of the user and add
+ * new data such as the URL of a macronutrient icon
+ * to display the InfoCard component list in the
+ * dashboard.
+ */
+class DashboardData {
   /**
-   * @typedef {{
-   *  caloriesCount: number,
-   *  proteinCount: number,
-   *  carbohydrateCount: number,
-   *  lipidCount: number
-   * }} KeyData
+   * The macronutrients of a user’s day.
+   *
+   * @typedef {Object} KeyData
+   * @property {Number} KeyData.caloriesCount
+   * the count of calories.
+   *
+   * @property {Number} KeyData.proteinCount
+   * the count of protein.
+   *
+   * @property {Number} KeyData.carbohydrateCount
+   * the count of carbohydrate.
+   *
+   * @property {Number} KeyData.lipidCount the count of lipid.
    */
 
   /**
-   *
    * @param {KeyData} keyData
-   * @param {Number} keyData.caloriesCount
-   * @param {Number} keyData.proteinCount
-   * @param {Number} keyData.carbohydrateCount
-   * @param {Number} keyData.lipidCount
    */
   constructor(keyData) {
     this.infoCardsData = this.createInfoCardsData(keyData)
   }
 
   /**
+   * Builds the data needed to display information
+   * cards from a user’s list of macronutrients of
+   * the day.
+   *
    * @credits this article :
    * (https://www.javatpoint.com/convert-object-to-array-in-javascript)
    *  – helped me figure out how to create a list
    * from an object.
    *
-   *
-   * @param {KeyData} keyData
+   * @param {KeyData} keyData the macronutrients of
+   * a user’s day.
    *
    * @returns {InfoCardData[] | null}
    */
@@ -84,3 +98,5 @@ export default class DashboardData {
     return infoCardsData[0] !== null ? infoCardsData : null
   }
 }
+
+export default DashboardData

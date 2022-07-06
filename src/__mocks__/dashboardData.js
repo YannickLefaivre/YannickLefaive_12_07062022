@@ -2,7 +2,7 @@ import calorieIcon from '../assets/icons/icon-calorie.svg'
 import carbohydrateIcon from '../assets/icons/icon-carbohydrate.svg'
 import lipidIcon from '../assets/icons/icon-lipid.svg'
 import proteinIcon from '../assets/icons/icon-protein.svg'
-import * as userMock from '../__mocks__/userMock.js'
+import * as userMock from './userMock.js'
 import FormatString from '../utils/data-formatters/FormatString'
 
 export const dashboardData = [

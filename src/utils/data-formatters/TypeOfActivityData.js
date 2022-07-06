@@ -1,6 +1,12 @@
 import FormatString from './FormatString'
 
-export default class TypeOfActivityData {
+/**
+ * This class formats user activity information to
+ * allow the TypeOfActivity component to display
+ * text indicating the type of activity performed
+ * at the polar angles of a RadarChart.
+ */
+class TypeOfActivityData {
   /**
    *
    * @param {Object[]} activities
@@ -77,3 +83,5 @@ export default class TypeOfActivityData {
     })
   }
 }
+
+export default TypeOfActivityData

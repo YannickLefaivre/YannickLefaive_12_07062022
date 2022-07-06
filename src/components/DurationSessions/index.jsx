@@ -9,6 +9,9 @@ import Error from '../Error'
 import './style.css'
 
 /**
+ * Displays the average session time of a auhtenticate
+ * user. A tooltip appears when hovering over.
+ *
  * @credits I was able to reproduce the visual
  * effect that appears when hovering over the line
  * chart when the tooltip is active by understanding
@@ -65,9 +68,7 @@ function DurationSessions() {
   return (
     <div className="duration-sessions-chart">
       {isLoading ? (
-        <Loader>
-          <p>Chargement des données de la page...</p>
-        </Loader>
+        <Loader />
       ) : error ? (
         <Error />
       ) : (
@@ -75,7 +76,7 @@ function DurationSessions() {
           <LineChart
             className="duration-sessions-chart__line-chart"
             onMouseMove={(e) => displayTheVisualEffect(e)}
-            data={durationSessionsData.userAverageSessions}
+            data={durationSessionsData.durationOfUserSessions}
             margin={{ top: 77.52, left: 0, bottom: 16, right: 0 }}
           >
             <defs>

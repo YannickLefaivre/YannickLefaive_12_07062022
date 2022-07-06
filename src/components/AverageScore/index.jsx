@@ -38,9 +38,7 @@ function AverageScore() {
   return (
     <div className="average-score-chart">
       {isLoading ? (
-        <Loader>
-          <p>Chargement des données de la page...</p>
-        </Loader>
+        <Loader />
       ) : error ? (
         <Error />
       ) : (
@@ -76,12 +74,7 @@ function AverageScore() {
                 objectif
               </tspan>
             </text>
-            <RadialBar
-              dataKey="score"
-              label={false}
-              name="Daily goal"
-              cornerRadius={5}
-            />
+            <RadialBar dataKey="score" label={false} cornerRadius={5} />
           </RadialBarChart>
         </ResponsiveContainer>
       )}

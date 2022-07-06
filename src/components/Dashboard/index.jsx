@@ -11,6 +11,21 @@ import Loader from '../../components/Loader'
 import Error from '../../components/Error'
 import './style.css'
 
+/**
+ * Displays the dashboard of a authenticated user that
+ * provides an overview of their sports goals and
+ * statistics.
+ *
+ * Such as:
+ * - its daily activity,
+ * - the average duration of its sessions,
+ * - the type of activity performed,
+ * - the percentage of completion of its daily goal
+ * - and key information on the number of
+ * macronutrients consumed in the day.
+ *
+ * @returns {JSX.Element} A Dashboard component.
+ */
 function Dashboard() {
   const [isLoading, setLoading] = useState(true)
   const [dashboardData, setDashboardData] = useState({})
@@ -35,7 +50,7 @@ function Dashboard() {
   }, [])
 
   return (
-    <main className="main-content dashboard">
+    <main className="app-layout__main-content dashboard">
       <MainContentHeader />
       <div className="dashboard-user-statistics">
         <DailyActivity />
@@ -45,9 +60,7 @@ function Dashboard() {
       </div>
       <div className="dashboard__key-infos">
         {isLoading ? (
-          <Loader>
-            <p>Chargement des données de la page...</p>
-          </Loader>
+          <Loader />
         ) : error ? (
           <Error />
         ) : (

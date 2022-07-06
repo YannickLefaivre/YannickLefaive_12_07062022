@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>components/AverageScore/index.jsx - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="AverageScoreData.html">AverageScoreData</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="DailyActivityData.html">DailyActivityData</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="DashboardData.html">DashboardData</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="DurationSessionsData.html">DurationSessionsData</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="FormatString.html">FormatString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="FormatString.html#.firstLetterToUpperCase">firstLetterToUpperCase</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="FormatString.html#.putTheNumberInEnglishFormat">putTheNumberInEnglishFormat</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="FormatString.html#.retrieveDayNumber">retrieveDayNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="FormatString.html#.toLocaleStringSupportsOptions">toLocaleStringSupportsOptions</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="InfoCardData.html">InfoCardData</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MainContentHeaderData.html">MainContentHeaderData</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TypeOfActivityData.html">TypeOfActivityData</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#App">App</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#AuthContextProvider">AuthContextProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#AverageScore">AverageScore</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#averageScoreDataProvider">averageScoreDataProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#CustomAxisTick">CustomAxisTick</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#CustomLegend">CustomLegend</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#CustomTooltip">CustomTooltip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#DailyActivity">DailyActivity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#dailyActivityDataProvider">dailyActivityDataProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#Dashboard">Dashboard</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#dashboardDataProvider">dashboardDataProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#DurationSessions">DurationSessions</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#durationSessionsDataProvider">durationSessionsDataProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#Error">Error</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#fakeAuthProvider">fakeAuthProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#InfoCard">InfoCard</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#Loader">Loader</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#Login">Login</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#MainContentHeader">MainContentHeader</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#mainContentHeaderDataProvider">mainContentHeaderDataProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#NavigationBar">NavigationBar</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#NotFound">NotFound</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#Profile">Profile</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#RequireAuth">RequireAuth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#Router">Router</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#SideNavigationMenu">SideNavigationMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#TopNavigationMenu">TopNavigationMenu</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#TypeOfActivity">TypeOfActivity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#typeOfActivityDataProvider">typeOfActivityDataProvider</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#useAuth">useAuth</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#warnThatHTTPCallFailed">warnThatHTTPCallFailed</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/AverageScore/index.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { ResponsiveContainer, RadialBarChart, RadialBar } from 'recharts'
+import { averageScoreDataProvider } from '../../utils/providers.js'
+import Error from '../Error'
+import Loader from '../Loader'
+import './style.css'
+
+/**
+ * Displays a radial bar type chart indicating the
+ * user’s completion level in achieving their daily goal.
+ *
+ * @return {JSX.Element} A AverageScore component.
+ */
+function AverageScore() {
+  const [isLoading, setLoading] = useState(true)
+  const [averageScoreData, setAverageScoreData] = useState([])
+  const [error, setError] = useState(false)
+
+  const { userId } = useParams()
+
+  useEffect(() => {
+    const getAverageScoreData = async () => {
+      try {
+        const data = await averageScoreDataProvider(userId)
+
+        setAverageScoreData(data)
+      } catch (err) {
+        setError(true)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    getAverageScoreData()
+  }, [])
+
+  return (
+    &lt;div className="average-score-chart">
+      {isLoading ? (
+        &lt;Loader />
+      ) : error ? (
+        &lt;Error />
+      ) : (
+        &lt;ResponsiveContainer>
+          &lt;RadialBarChart
+            width={159.38}
+            height={159.38}
+            startAngle={0}
+            endAngle={averageScoreData[0].score}
+            innerRadius={87}
+            outerRadius={87}
+            barSize={10}
+            data={averageScoreData}
+            margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+          >
+            &lt;text
+              x={0}
+              y="2.5%"
+              dominantBaseline="hanging"
+              fontSize={14}
+              fontWeight={500}
+            >
+              Score
+            &lt;/text>
+            &lt;text textAnchor="middle" fontSize={16} fontWeight={500}>
+              &lt;tspan x="50%" y="50%" fontSize={26} fontWeight="bold">
+                {`${averageScoreData[0].score}%`}
+              &lt;/tspan>
+              &lt;tspan x="50%" y="62.5%">
+                de votre
+              &lt;/tspan>
+              &lt;tspan x="50%" y="74%">
+                objectif
+              &lt;/tspan>
+            &lt;/text>
+            &lt;RadialBar dataKey="score" label={false} cornerRadius={5} />
+          &lt;/RadialBarChart>
+        &lt;/ResponsiveContainer>
+      )}
+    &lt;/div>
+  )
+}
+
+export default AverageScore
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Jul 05 2022 20:37:30 GMT-0400 (heure normale de l’Amazonie) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
