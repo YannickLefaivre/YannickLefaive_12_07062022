@@ -129,7 +129,7 @@ function DailyActivity() {
               height={24 + customTickMargin.xAxisTickMargin}
               tick={{
                 fontSize: 'var(--desktop-font-size-14px-in-rem)',
-                stroke: 'rgb(var(--daily-activity-chart-tick-color))',
+                stroke: 'rgb(var(--quaternary-color))',
                 strokeWidth: 0.1,
               }}
               tickLine={false}
@@ -141,7 +141,7 @@ function DailyActivity() {
               axisLine={false}
               tick={{
                 fontSize: 'var(--desktop-font-size-14px-in-rem)',
-                stroke: 'rgba(var(--daily-activity-chart-tick-color))',
+                stroke: 'rgba(var(--quaternary-color))',
                 strokeWidth: 0.1,
               }}
               tickLine={false}
