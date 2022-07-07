@@ -202,14 +202,14 @@ a:active {
   }
 
   .app-layout__main-content {
+    grid-column: 2;
+    grid-row: 2;
     margin: 3.4375rem auto 5.375rem;
   }
 }
 
 @media (min-width: 1440px) {
   .app-layout__main-content {
-    grid-column: 2;
-    grid-row: 2;
-    margin: 4.25rem auto 5.375rem;
+    margin-top: 4.25rem;
   }
 }
