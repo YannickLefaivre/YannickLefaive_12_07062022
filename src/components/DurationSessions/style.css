@@ -15,6 +15,12 @@
     font-size: var(--desktop-font-size-15px-in-rem);
   }
 
+  /* Error style modifier */
+
+  .error__message--duration-sessions-chart {
+    color: rgba(var(--text-light), 0.5);
+  }
+
   /* Custom tooltip modifier */
 
   .custom-tooltip--line-chart {

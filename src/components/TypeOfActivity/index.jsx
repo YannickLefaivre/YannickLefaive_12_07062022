@@ -54,7 +54,11 @@ function TypeOfActivity() {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Error />
+        <Error
+          styleModifier={{
+            errorMessage: 'error__message--type-of-activity-chart',
+          }}
+        />
       ) : (
         <ResponsiveContainer>
           <RadarChart

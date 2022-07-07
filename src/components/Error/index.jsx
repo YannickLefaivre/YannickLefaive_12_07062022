@@ -8,9 +8,9 @@ import './style.css'
  * @param {Object} [props] Properties of the
  * functional component.
  *
- * @param {String} [props.type="Erreur"] The type of error.
- *
  * @param {String} [props.message="Une erreur est survenue lorsque nous avons tenté d'afficher les informations que vous voulez consulter. Recharger la page pourrait vous permettre de voir de nouveau ces informations."] Error message displayed.
+ *
+ * @param {String} [props.type=""] The type of error.
  *
  * @param {React.ReactNode | React.ReactNode[]} [props.children=null]
  * Displays other useful content for the user to
@@ -39,17 +39,17 @@ import './style.css'
 function Error({ type, message, children, styleModifier }) {
   return (
     <div
-      className={`error ${
+      className={`error${
         styleModifier && styleModifier.errorContainer
-          ? styleModifier.errorContainer
+          ? ` ${styleModifier.errorContainer}`
           : ''
       }`}
     >
       {type && (
         <h1
-          className={`error__type ${
+          className={`error__type${
             styleModifier && styleModifier.typeOfError
-              ? `${styleModifier.typeOfError}`
+              ? ` ${styleModifier.typeOfError}`
               : ''
           }`}
         >
@@ -57,9 +57,9 @@ function Error({ type, message, children, styleModifier }) {
         </h1>
       )}
       <p
-        className={`error__message ${
+        className={`error__message${
           styleModifier && styleModifier.errorMessage
-            ? `${styleModifier.errorMessage}`
+            ? ` ${styleModifier.errorMessage}`
             : ''
         }`}
       >
@@ -71,8 +71,8 @@ function Error({ type, message, children, styleModifier }) {
 }
 
 Error.propTypes = {
-  type: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
+  type: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
@@ -81,9 +81,9 @@ Error.propTypes = {
 }
 
 Error.defaultProps = {
-  type: 'Erreur',
   message:
     "Une erreur est survenue lorsque nous avons tenté d'afficher les informations que vous voulez consulter. Recharger la page pourrait vous permettre de voir de nouveau ces informations.",
+  type: '',
   children: null,
   styleModifier: null,
 }

@@ -10,4 +10,10 @@
     padding: 0.78125rem 0.3125rem;
     width: 100%;
   }
+
+  /* Error style modifier */
+
+  .error__message--type-of-activity-chart {
+    color: rgb(var(--text-light));
+  }
 }

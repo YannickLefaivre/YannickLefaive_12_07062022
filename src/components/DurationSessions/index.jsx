@@ -70,7 +70,11 @@ function DurationSessions() {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Error />
+        <Error
+          styleModifier={{
+            errorMessage: 'error__message--duration-sessions-chart',
+          }}
+        />
       ) : (
         <ResponsiveContainer>
           <LineChart
